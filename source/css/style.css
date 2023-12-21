@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/gothampro.woff"), url("../fonts/gothampro.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/gothampro-light.woff"), url("../fonts/gothampro-light.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham Pro";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/gothampro-bold.woff"), url("../fonts/gothampro-bold.ttf");
+  font-display: swap;
+}
+.button {
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  font: inherit;
+  color: inherit;
+  background-color: inherit;
+  cursor: pointer;
+}
+.wrapper {
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+@media (min-width: 640px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 960px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .wrapper {
+    padding: 0 50px;
+  }
+}
+@media (min-width: 1920px) {
+  .wrapper {
+    width: 100%;
+    max-width: 1820px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+}
+.font-title {
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.page {
+  min-width: 320px;
+  height: 100%;
+  margin: 0 auto;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 15px;
+  line-height: 19.6px;
+  color: #222222;
+  background-color: #FFFFFF;
+}
+.page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100%;
+  margin: 0;
+}
+.main-nav__logo-name {
+  color: #222222;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */

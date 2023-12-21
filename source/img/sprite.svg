@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="catalog-burger" viewBox="0 0 22 15"><g fill="none">
+<rect width="22" height="3" rx="0.7" fill="white"/>
+<rect y="12" width="22" height="3" rx="0.7" fill="white"/>
+<rect y="6" width="22" height="3" rx="0.7" fill="white"/>
+</g></symbol><symbol id="close-icon" viewBox="0 0 14 14"><g fill="currentColor">
+  <path d="M12.2502 0L6.99938 5.24954L1.74984 0L0 1.74985L5.24954 6.99938L0 12.2489L1.74984 13.9988L6.99938 8.74923L12.2502 13.9988L14 12.2489L8.75046 6.99938L14 1.74985L12.2502 0Z"/>
+</g></symbol><symbol id="menu-burger" viewBox="0 0 22 15"><g fill="currentColor">
+  <rect width="22" height="3" rx="0.7"/>
+  <rect y="12" width="13" height="3" rx="0.7"/>
+  <rect y="6" width="22" height="3" rx="0.7"/>
+</g></symbol></svg>
