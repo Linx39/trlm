@@ -1,0 +1,40 @@
+.office {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+
+  @media (min-width: @sm-width) {
+    display: flex;
+  }
+}
+
+.office__label {
+  display: none;
+
+  font: inherit;
+
+  @media (min-width: @sm-width) {
+    display: block;
+  }
+
+  @media (min-width: @ml-width) {
+    display: none;
+  }
+
+  @media (min-width: @xx-width) {
+    display: block;
+  }
+}
+
+.office__select {
+  width: 119px;
+  padding-right: 15px;
+
+  background-image: url("../../img/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  border: none;
+
+  font: inherit;
+  appearance: none;
+}

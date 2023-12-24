@@ -9,126 +9,133 @@
 
   <body class="page__body">
     <header class="page-header">
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <div class="page-header__site-menu site-menu">
-          <button class="site-menu__toggle" type="button">
-            <svg class="site-menu__toggle-icon site-menu__toggle-icon--open" width="50" height="24" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#menu-burger"></use>
+      <nav class="main-nav main-nav--default main-nav--nojs">
+        <!-- <div class="main-nav__logo logo"> -->
+          <a class="main-nav__logo logo-link" tabindex="0">
+            <img class="logo-link__img" src="./img/logo.svg"  alt="Логотип компании trim." width="80" height="88">
+            <span class="logo-link__name">trlm.ru</span>
+          </a>
+        <!-- </div> -->
+
+        <div class="main-nav__office office">
+          <label class="office__label" for="sorting">Офис на&nbsp;</label>
+          <select class="office__select" id="sorting" name="sorting">
+            <option value="ofice-1">Малиновского</option>
+            <option value="ofice-2">Большая Пироговская</option>
+            <option value="ofice-3">Павелецкая набережная</option>
+          </select>
+        </div>
+
+        <a class="main-nav__phone phone-link" href="88005501980">8-800-550-19-80</a>
+
+        <button class="main-nav__site-menu-toggle site-menu-toggle" type="button">
+          <svg class="site-menu-toggle__icon site-menu-toggle__icon--open" width="22" height="15" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#menu-burger"></use>
+          </svg>
+          <svg class="site-menu-toggle__icon site-menu-toggle__icon--close" width="23" height="23" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#close-icon"></use>
+          </svg>
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+
+        <ul class="main-nav__site-menu-list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Подбор запчастей</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Доставка</a>
+          </li>
+          <li class="site-list__item site-list__item--buy">
+            <a class="site-list__link" href="#">Как купить</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Оплата</a>
+          </li>
+          <li class="site-list__item site-list__item--promotion">
+            <a class="site-list__link" href="#">Акции</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Контакты</a>
+          </li>
+        </ul>
+
+
+        <ul class="main-nav__user-list user-list">
+          <li class="user-list__item">
+            <a class="user-list__link user-list__link-auth" href="#">
+              <svg class="user-list__link-icon" width="19" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#user"></use>
+              </svg>
+              <span class="user-list__link-subtitle">Войти</span>
+            </a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link user-list__link-cart" href="#">
+              <svg class="user-list__link-icon" width="24" height="24" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+              <span class="user-list__link-subtitle">Корзина</span>
+            </a>
+          </li>
+        </ul>
+
+        <button class="main-nav__catalog-menu-toggle catalog-menu-toggle app-button" type="button">
+          <div class="catalog-menu-toggle__icon-container">
+            <svg class="catalog-menu-toggle__icon catalog-menu-toggle__icon--open" width="22" height="15" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#catalog-burger"></use>
             </svg>
-            <svg class="site-menu__toggle-icon site-menu__toggle-icon--close" width="23" height="23" aria-hidden="true" focusable="false">
+            <svg class="catalog-menu-toggle__icon catalog-menu-toggle__icon--close" width="23" height="23" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#close-icon"></use>
             </svg>
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+          </div>
+          <span class="catalog-menu-toggle__title">Каталог</span>
+        </button>
 
-          <ul class="site-menu__list">
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="#">Подбор запчастей</a>
+        <div class="main-nav__catalog-menu">
+          <ul class="main-nav__products-list products-list">
+            <li class="products-list__item">
+              <a class="products-list__link" href="#">РАСХОДНЫЕ ЖИДКОСТИ</a>
             </li>
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="#">Доставка</a>
+            <li class="products-list__item">
+              <a class="products-list__link" href="#">РАСХОДНЫЕ МАТЕРИАЛЫ</a>
             </li>
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="#">Как купить</a>
+            <li class="products-list__item">
+              <a class="products-list__link" href="#">МАСЛА</a>
             </li>
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="#">Оплата</a>
+            <li class="products-list__item">
+              <a class="products-list__link" href="#">СМАЗКИ</a>
             </li>
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="#">Акции</a>
+            <li class="products-list__item">
+              <a class="products-list__link" href="#">АККУМУЛЯТОРЫ</a>
             </li>
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="#">Контакты</a>
+          </ul>
+
+          <ul class="main-nav__services-list services-list">
+            <li class="services-list__item">
+              <a class="services-list__link" href="#">Подбор шин и дисков</a>
             </li>
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="#">8-800-550-19-80</a>
+            <li class="services-list__item">
+              <a class="services-list__link" href="#">Подбор АКБ</a>
             </li>
           </ul>
         </div>
 
-        <a class="main-nav__logo" tabindex="0">
-          <img class="main-nav__logo-img" src="./img/logo.svg"  alt="Логотип компании trim." width="80" height="88">
-          <span class="main-nav__logo-name">trlm.ru</span>
-        </a>
-
-        <div class="main-nav__search">
-          <button class="main-nav__search-button">
+        <div class="main-nav__search search">
+          <button class="main-nav__search-button search__button">
+            <svg class="search__button-icon" width="18" height="18" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
             <span class="visually-hidden">Поиск на сайте</span>
           </button>
 
-          <form class="main-nav__form" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="main-nav__form-label" for="search">
-              <input class="main-nav__form-input" type="text" name="search" id="search" placeholder="Что ищите?">
-            </label>
+          <form class="main-nav__search-form search__form" action="https://echo.htmlacademy.ru/" method="get">
+            <label class="visually-hidden" for="search"></label>
+            <input class="search__form-input" type="text" name="search" id="search" placeholder="Что ищете?">
             <button class="visually-hidden" type="submit">Найти</button>
           </form>
         </div>
 
-        <div class="main-nav__user-menu user-menu">
-          <ul class="user-menu__list">
-            <li class="user-menu__item">
-              <a class="user-menu__link" href="#">Войти</a>
-            </li>
-            <li class="user-menu__item">
-              <a class="user-menu__link" href="#">Корзина</a>
-            </li>
-          </ul>
-        </div>
-
-        <label class="main-nav__office-label" for="sorting">
-          <select class="main-nav__office-select" id="sorting" name="sorting">
-            <option value="ofice-1"><span>Офис на </span>Малиновского</option>
-            <option value="ofice-2"><span>Офис на </span>Большая Пироговская</option>
-            <option value="ofice-3"><span>Офис на </span>Павелецкая набережная</option>
-          </select>
-        </label>
-
-        <p class="main-nav__contacts">8-800-550-19-80</p>
-
-        <div class="main-nav__catalog-menu catalog-menu">
-          <button class="catalog-menu__toggle" type="button">
-            <svg class="catalog-menu__toggle-icon catalog-menu__toggle-icon--open" width="50" height="24" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#catalog-burger"></use>
-            </svg>
-            <svg class="catalog-menu__toggle-icon catalog-menu__toggle-icon--close" width="23" height="23" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#close-icon"></use>
-            </svg>
-            <span class="catalog-menu__toggle-title">Каталог</span>
-          </button>
-
-          <div class="catalog-menu__products">
-            <h2 class="visually-hidden">Каталог продуктов</h2>
-            <ul class="catalog-menu__products-list products-list">
-              <li class="products-list__item">
-                <a class="products-list__link" href="#">РАСХОДНЫЕ ЖИДКОСТИ</a>
-              </li>
-              <li class="products-list__item">
-                <a class="products-list__link" href="#">РАСХОДНЫЕ МАТЕРИАЛЫ</a>
-              </li>
-              <li class="products-list__item">
-                <a class="products-list__link" href="#">МАСЛА</a>
-              </li>
-              <li class="products-list__item">
-                <a class="products-list__link" href="#">СМАЗКИ</a>
-              </li>
-              <li class="products-list__item">
-                <a class="products-list__link" href="#">АККУМУЛЯТОРЫ</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="catalog-menu__services">
-            <h2 class="catalog-menu__services-title">Подбор запчастей</h2>
-            <ul class="catalog-menu__services-list services-list">
-              <li class="services-list__item">
-                <a class="services-list__link" href="#">Подбор шин и дисков</a>
-              </li>
-              <li class="services-list__item">
-                <a class="services-list__link" href="#">Подбор АКБ</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <div class="main-nav__bottom-bar"></div>
       </nav>
     </header>
 

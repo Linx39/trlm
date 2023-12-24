@@ -6,7 +6,7 @@
 }
 
 .button {
-  display: block;
+  display: inline-block;
   box-sizing: border-box;
   border: none;
   padding: 0;
@@ -20,28 +20,29 @@
 
 .wrapper {
   box-sizing: border-box;
+  width: 100%;
   padding: 0 @xs-padding;
 
-  @media (min-width: @s-width) {
-    padding: 0 @s-padding;
+  @media (min-width: @sm-width) {
+    padding: 0 @sm-padding;
   }
 
-  @media (min-width: @m-width) {
-    padding: 0 @m-padding;
+  @media (min-width: @ml-width) {
+    padding: 0 @ml-padding;
   }
 
-  @media (min-width: @l-width) {
-    padding: 0 @l-padding;
+  @media (min-width: @lg-width) {
+    padding: 0 @lg-padding;
   }
 
   @media (min-width: @xl-width) {
     padding: 0 @xl-padding;
   }
 
-  @media (min-width: @xxl-width) {
-    width: 100%;
+  @media (min-width: @xx-width) {
+    // width: 100%;
     max-width: @max-content;
-    padding: 0 @xxl-padding;
+    padding: 0 @xx-padding;
     margin: 0 auto;
   }
 }

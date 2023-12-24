@@ -1,0 +1,42 @@
+.site-list {
+  .list();
+
+  @media (min-width: @ml-width) {
+    display: flex;
+  }
+}
+
+.site-list__item {
+  &:not(:last-of-type) {
+    margin-right: 40px;
+  }
+
+  @media (min-width: @lg-width) {
+    &--buy {
+      display: none;
+    }
+
+    &--promotion {
+      display: none;
+    }
+  }
+
+  @media (min-width: @xl-width) {
+    &--buy {
+      display: block;
+    }
+
+    &--promotion {
+      display: block;
+    }
+  }
+}
+
+.site-list__link {
+  color: inherit;
+
+  font-size: 15px;
+  line-height: 19.6px;
+  font-weight: 400;
+  text-decoration: none;
+}
