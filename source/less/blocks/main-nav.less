@@ -7,7 +7,7 @@
   width: 100%;
 
   @media (min-width: @sm-width) {
-    grid-template-columns: @sm-padding minmax(32px, min-content) min-content min-content auto auto auto auto @sm-padding;
+    grid-template-columns: @sm-padding minmax(32px, min-content) min-content min-content auto auto auto min-content @sm-padding;
     grid-template-rows: minmax(60px, min-content) minmax(70px, min-content);
   }
 
@@ -18,7 +18,15 @@
 
   @media (min-width: @lg-width) {
     grid-template-columns: @lg-padding minmax(110px, min-content) min-content min-content auto auto @lg-padding;
-    grid-template-rows: minmax(61px, min-content) minmax(50px, min-content) minmax(29px, min-content);
+  }
+
+  @media (min-width: @xl-width) {
+    grid-template-columns: @xl-padding minmax(120px, min-content) min-content min-content auto auto @xl-padding;
+  }
+
+  @media (min-width: @xx-width) {
+    max-width: @xx-width;
+    margin: 0 auto;
   }
 }
 
@@ -49,6 +57,11 @@
     align-self: end;
 
     margin-right: 20px;
+  }
+
+  @media (min-width: @xl-width) {
+    padding-left: 10px;
+    margin-right: 30px;
   }
 }
 
@@ -99,6 +112,12 @@
 
   @media (min-width: @ml-width) {
     grid-column: -2 / -3;
+
+    margin-right: 10px;
+  }
+
+  @media (min-width: @lg-width) {
+    margin-right: 0;
   }
 }
 
@@ -108,13 +127,9 @@
 
   margin-right: 12px;
 
-  // background-color: @color-light-grey;
-
   @media (min-width: @sm-width) {
     grid-row: 1 / 2;
     grid-column: 4 / 6;
-
-    // background-color: inherit;
   }
 
   @media (min-width: @ml-width) {
@@ -136,7 +151,11 @@
     grid-column: 4 / 5;
     justify-self: start;
 
-    margin-right: 36px;
+    margin-right: 21px;
+  }
+
+  @media (min-width: @lg-width) {
+    margin-right: 47px;
   }
 }
 
@@ -171,6 +190,7 @@
 
   @media (min-width: @xl-width) {
     width: 156px;
+    margin-right: 30px;
   }
 
   @media (min-width: @xx-width) {
@@ -183,8 +203,8 @@
     grid-row: 3 / 4;
     grid-column: 3 / -2;
 
-    padding-top: 11px;
-    padding-bottom: 18px;
+    padding-top: 8px;
+    padding-bottom: 1px;
   }
 
   @media (min-width: @lg-width) {
@@ -235,7 +255,6 @@
     display: block;
   }
 }
-
 
 
 //

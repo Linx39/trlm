@@ -5,6 +5,19 @@
 
   color: @color-white;
   background-color: @color-blue;
+
+  &:hover {
+    background-color: @color-light-blue;
+  }
+
+  &:focus-within {
+    background-color: @color-light-blue;
+    outline: none;
+  }
+
+  &:active {
+    background-color: @color-dark-blue;
+  }
 }
 
 .catalog-menu-toggle__icon-container {
@@ -17,7 +30,7 @@
 .catalog-menu-toggle__icon--open {
   position: relative;
   top: 2px;
-  left: -1px;
+  left: 0;
 }
 
 .catalog-menu-toggle__icon--close {

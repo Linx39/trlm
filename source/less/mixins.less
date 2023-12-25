@@ -54,3 +54,18 @@
   text-transform: uppercase;
   text-align: center;
 }
+
+.interactive-styles {
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:focus-within {
+    opacity: 0.3;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
