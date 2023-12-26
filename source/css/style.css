@@ -34,7 +34,11 @@
 .wrapper {
   box-sizing: border-box;
   width: 100%;
-  padding: 0 10px;
+}
+@media (max-width: 319px) {
+  .wrapper {
+    padding: 0 10px;
+  }
 }
 @media (min-width: 640px) {
   .wrapper {
@@ -103,7 +107,7 @@ img {
   font-size: 15px;
   line-height: 20px;
   color: #222222;
-  background-color: #FFFFFF;
+  background-color: #F0F0F0;
 }
 .page__body {
   display: grid;
@@ -111,7 +115,7 @@ img {
   min-height: 100%;
   margin: 0;
 }
-.app-button {
+.app__btn {
   display: inline-block;
   box-sizing: border-box;
   border: none;
@@ -128,6 +132,9 @@ img {
   font-size: 16px;
   line-height: 23px;
   font-weight: 700;
+}
+.page-header {
+  background-color: #FFFFFF;
 }
 .logo-link {
   display: inline-block;
@@ -278,7 +285,7 @@ img {
 .site-menu-toggle__icon--close {
   display: none;
 }
-.search__button {
+.search__btn {
   display: inline-block;
   box-sizing: border-box;
   border: none;
@@ -730,7 +737,7 @@ img {
   }
 }
 @media (min-width: 640px) {
-  .main-nav__search-button {
+  .main-nav__search-btn {
     display: none;
   }
 }
@@ -752,5 +759,200 @@ img {
 }
 .main-nav--default .main-nav__catalog-menu {
   display: none;
+}
+.gallery-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.gallery-list__item {
+  position: relative;
+}
+.gallery-list__title {
+  width: min-content;
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0 9px;
+  color: #FFFFFF;
+  background-color: #FF4400;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 33px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (min-width: 640px) {
+  .gallery-list__title {
+    margin-bottom: 33px;
+  }
+}
+.gallery-list__description {
+  position: relative;
+  z-index: 1;
+  width: 210px;
+  margin: 0;
+  margin-bottom: 32px;
+  color: #FFFFFF;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+}
+@media (min-width: 640px) {
+  .gallery-list__description {
+    width: 320px;
+    margin-bottom: 33px;
+    font-size: 42px;
+    line-height: 49px;
+  }
+}
+.gallery-list__btn {
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  font: inherit;
+  color: inherit;
+  background-color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.gallery-list__btn-caption {
+  margin-right: 16px;
+}
+.gallery-list__btn-icon {
+  color: #1C69D4;
+}
+.gallery-list__img {
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+@media (min-width: 640px) {
+  .gallery-list__img {
+    top: -24px;
+    right: 8px;
+  }
+}
+.gallery {
+  box-sizing: border-box;
+  width: 100%;
+}
+@media (max-width: 319px) {
+  .gallery {
+    padding: 0 10px;
+  }
+}
+@media (min-width: 640px) {
+  .gallery {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 960px) {
+  .gallery {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .gallery {
+    padding: 0 50px;
+  }
+}
+@media (min-width: 1920px) {
+  .gallery {
+    max-width: 1820px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 959px) {
+  .gallery {
+    padding: 0;
+  }
+}
+.gallery__slider {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 388px;
+  padding: 27px 10px 27px 10px;
+  background-image: -webkit-image-set(url("../../img/gallery-back/champion-back-320px.webp") type("image/webp") 1x, url("../../img/gallery-back/champion-back-320px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/champion-back-320px.png") type("image/png") 1x, url("../../img/gallery-back/champion-back-320px@2x.png") type("image/png") 2x);
+  background-image: image-set(url("../../img/gallery-back/champion-back-320px.webp") type("image/webp") 1x, url("../../img/gallery-back/champion-back-320px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/champion-back-320px.png") type("image/png") 1x, url("../../img/gallery-back/champion-back-320px@2x.png") type("image/png") 2x);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 640px) {
+  .gallery__slider {
+    min-height: 517px;
+    padding: 40px 20px 218px 20px;
+    background-image: -webkit-image-set(url("../../img/gallery-back/champion-back-640px.webp") type("image/webp") 1x, url("../../img/gallery-back/champion-back-640px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/champion-back-640px.png") type("image/png") 1x, url("../../img/gallery-back/champion-back-640px@2x.png") type("image/png") 2x);
+    background-image: image-set(url("../../img/gallery-back/champion-back-640px.webp") type("image/webp") 1x, url("../../img/gallery-back/champion-back-640px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/champion-back-640px.png") type("image/png") 1x, url("../../img/gallery-back/champion-back-640px@2x.png") type("image/png") 2x);
+  }
+}
+.gallery__list {
+  max-width: 420px;
+  margin: 0 auto;
+}
+@media (min-width: 640px) {
+  .gallery__list {
+    max-width: 680px;
+  }
+}
+.gallery__controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: end;
+}
+@media (min-width: 640px) {
+  .gallery__controls {
+    right: 20px;
+  }
+}
+.gallery-controls__btn {
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  font: inherit;
+  color: inherit;
+  background-color: inherit;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url("../../img/arrow-right.svg");
+  background-size: 26px 19px;
+  background-position: center left 17px;
+  background-repeat: no-repeat;
+}
+.gallery-controls__btn--prev {
+  transform: rotate(180deg);
+}
+.gallery-controls__btn--disabled {
+  opacity: 0.4;
+}
+@media (min-width: 640px) {
+  .gallery-controls__btn {
+    width: 80px;
+    height: 80px;
+    background-size: 34px 24px;
+    background-position: center left 23px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

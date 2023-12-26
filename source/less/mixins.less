@@ -21,7 +21,10 @@
 .wrapper {
   box-sizing: border-box;
   width: 100%;
-  padding: 0 @xs-padding;
+
+  @media (max-width: (@xs-width - 1)) {
+    padding: 0 @xs-padding;
+  }
 
   @media (min-width: @sm-width) {
     padding: 0 @sm-padding;

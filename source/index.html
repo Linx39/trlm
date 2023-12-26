@@ -3,19 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Газовые котлы</title>
+    <title>Магазин автозапчастей</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
 
   <body class="page__body">
     <header class="page-header">
+      <h1 class="visually-hidden">Магазин автозапчастей trlm</h1>
       <nav class="main-nav main-nav--default main-nav--nojs">
-        <!-- <div class="main-nav__logo logo"> -->
-          <a class="main-nav__logo logo-link" tabindex="0">
-            <img class="logo-link__img" src="./img/logo.svg"  alt="Логотип компании trim." width="80" height="88">
-            <span class="logo-link__name">trlm.ru</span>
-          </a>
-        <!-- </div> -->
+        <a class="main-nav__logo logo-link" tabindex="0">
+          <img class="logo-link__img" src="./img/logo.svg"  alt="Логотип компании trim." width="80" height="88">
+          <span class="logo-link__name">trlm.ru</span>
+        </a>
 
         <div class="main-nav__office office">
           <label class="office__label" for="sorting">Офис на&nbsp;</label>
@@ -78,7 +77,7 @@
           </li>
         </ul>
 
-        <button class="main-nav__catalog-menu-toggle catalog-menu-toggle app-button" type="button">
+        <button class="main-nav__catalog-menu-toggle catalog-menu-toggle app__btn" type="button">
           <div class="catalog-menu-toggle__icon-container">
             <svg class="catalog-menu-toggle__icon catalog-menu-toggle__icon--open" width="22" height="15" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#catalog-burger"></use>
@@ -120,8 +119,8 @@
         </div>
 
         <div class="main-nav__search search">
-          <button class="main-nav__search-button search__button">
-            <svg class="search__button-icon" width="18" height="18" aria-hidden="true" focusable="false">
+          <button class="main-nav__search-btn search__btn">
+            <svg class="search__btn-icon" width="18" height="18" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#search"></use>
             </svg>
             <span class="visually-hidden">Поиск на сайте</span>
@@ -139,8 +138,42 @@
     </header>
 
     <main class="page-main">
-      <section class="promotion">
-        
+      <section class="gallery">
+        <div class="gallery__slider slider">
+          <h2 class="visually-hidden">Фотогалерея</h2>
+
+          <ul class="gallery__list gallery-list slider__list">
+            <li class="gallery-list__item slider__item">
+              <h3 class="gallery-list__title">Champion</h3>
+              <p class="gallery-list__description">Фильтр масла в&nbsp;подарок</p>
+
+              <a class="gallery-list__btn" href="#">
+                <span class="gallery-list__btn-caption">Подробнее</span>
+                <svg class="gallery-list__btn-icon" width="39" height="22" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite.svg#more"></use>
+                </svg>
+              </a>
+
+              <div class="gallery-list__img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 640px)" srcset="img/gallery/champion-640px.webp 1x, img/gallery/champion-640px@2x.webp 2x">
+                  <source type="image/webp" srcset="img/gallery/champion-320px.webp 1x, img/gallery/champion-320px@2x.webp 2x">
+                  <source media="(min-width: 640px)" srcset="img/gallery/champion-640px.png 1x, img/gallery/champion-640px@2x.jpg 2x">
+                  <img src="img/gallery/champion-320px.png" srcset="img/gallery/champion-320px@2x.png 2x" alt="Фото товара.">
+                </picture>
+              </div>
+            </li>
+          </ul>
+
+          <div class="gallery__controls gallery-controls slider__controls">
+            <button class="gallery-controls__btn gallery-controls__btn--prev gallery-controls__btn--disabled slider__btn slider__btn--prev" type="button">
+              <span class="visually-hidden">Предыдущее фото</span>
+            </button>
+            <button class="gallery-controls__btn gallery-controls__btn--next slider__btn slider__btn--next" type="button">
+              <span class="visually-hidden">Следующее фото</span>
+            </button>
+          </div>
+        </div>
       </section>
     </main>
 
