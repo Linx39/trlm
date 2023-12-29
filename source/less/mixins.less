@@ -72,3 +72,30 @@
     opacity: 0.1;
   }
 }
+
+@img-path: "../../img/";
+@gallery-back-path: "@{img-path}gallery-back/";
+
+.retina-background(@img-src, @img-name, @img-width) {
+  background-image: image-set(
+    url("@{img-src}@{img-name}-@{img-width}.webp") type("image/webp") 1x,
+    url("@{img-src}@{img-name}-@{img-width}@2x.webp") type("image/webp") 2x,
+    url("@{img-src}@{img-name}-@{img-width}.png") type("image/png") 1x,
+    url("@{img-src}@{img-name}-@{img-width}@2x.png") type("image/png") 2x,
+  );
+}
+
+.gallery-background(@img-name) {
+  .retina-background(@gallery-back-path, @img-name, @xs-width);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: @sm-width) {
+    .retina-background(@gallery-back-path, @img-name, @sm-width);
+  }
+
+  @media (min-width: @ml-width) {
+    .retina-background(@gallery-back-path, @img-name, @max-content);
+  }
+}

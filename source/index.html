@@ -12,7 +12,7 @@
       <h1 class="visually-hidden">Магазин автозапчастей trlm</h1>
       <nav class="main-nav main-nav--default main-nav--nojs">
         <div class="main-nav__bottom-bar"></div>
-        
+
         <a class="main-nav__logo logo-link" tabindex="0">
           <img class="logo-link__img" src="./img/logo.svg"  alt="Логотип компании trim." width="80" height="88">
           <span class="logo-link__name">trlm.ru</span>
@@ -145,25 +145,65 @@
           <h2 class="visually-hidden">Фотогалерея</h2>
 
           <ul class="gallery__list gallery-list slider__list">
-            <li class="gallery-list__item slider__item">
-              <h3 class="gallery-list__title">Champion</h3>
-              <p class="gallery-list__description">Фильтр масла в&nbsp;подарок</p>
+            <li class="gallery-list__item gallery-list__item--champion gallery-list__item--current slider__item slider__item--current">
+              <div class="gallery-list__content">
+                <h3 class="visually-hidden">Моторное масло Champion</h3>
+                <img class="gallery-list__logo" src="./img/logo-champion.svg"  alt="Логотип компании Champion." width="122" height="33">
+                <p class="gallery-list__description">Фильтр масла в&nbsp;подарок</p>
 
-              <a class="gallery-list__btn" href="#">
-                <span class="gallery-list__btn-caption">Подробнее</span>
-                <svg class="gallery-list__btn-icon" width="39" height="22" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#more"></use>
-                </svg>
-              </a>
+                <a class="gallery-list__btn" href="#">
+                  <span class="gallery-list__btn-caption">Подробнее</span>
+                  <svg class="gallery-list__btn-icon" width="39" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite.svg#more"></use>
+                  </svg>
+                </a>
+              </div>
 
-              <div class="gallery-list__img">
+              <div class="gallery-list__img gallery-list__img--item-1">
                 <picture>
-                  <source type="image/webp" media="(min-width: 640px)" srcset="img/gallery/champion-640px.webp 1x, img/gallery/champion-640px@2x.webp 2x">
+                  <!-- <source type="image/webp" media="(min-width: 640px)" srcset="img/gallery/champion-640px.webp 1x, img/gallery/champion-640px@2x.webp 2x">
                   <source type="image/webp" srcset="img/gallery/champion-320px.webp 1x, img/gallery/champion-320px@2x.webp 2x">
                   <source media="(min-width: 640px)" srcset="img/gallery/champion-640px.png 1x, img/gallery/champion-640px@2x.jpg 2x">
-                  <img src="img/gallery/champion-320px.png" srcset="img/gallery/champion-320px@2x.png 2x" alt="Фото товара.">
+                  <img src="img/gallery/champion-320px.png" srcset="img/gallery/champion-320px@2x.png 2x" alt="Фото товара."> -->
+
+                  <!-- <source type="image/webp" media="(min-width: 640px)" srcset="img/gallery/champion-640px.webp 1x, img/gallery/champion-640px@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/gallery/champion-640px.webp 1x, img/gallery/champion-640px@2x.webp 2x">
+                  <!-- <source media="(min-width: 640px)" srcset="img/gallery/champion-640px.png 1x, img/gallery/champion-640px@2x.jpg 2x"> -->
+                  <img src="img/gallery/champion-640px.png" srcset="img/gallery/champion-640px@2x.png 2x" alt="Фото товара.">
                 </picture>
               </div>
+
+              <p class="gallery-list__slogan">New Energy</p>
+            </li>
+
+            <li class="gallery-list__item gallery-list__item--felix slider__item slider__item--current">
+              <div class="gallery-list__content">
+                <h3 class="visually-hidden">Очиститель Felix</h3>
+                <img class="gallery-list__logo" src="./img/logo-felix.svg"  alt="Логотип компании Felix." width="114" height="40">
+                <p class="gallery-list__description">Комплект бесконтактной мойки</p>
+
+                <a class="gallery-list__btn" href="#">
+                  <span class="gallery-list__btn-caption">Подробнее</span>
+                  <svg class="gallery-list__btn-icon" width="39" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite.svg#more"></use>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="gallery-list__img gallery-list__img--item-2">
+                <picture>
+                  <!-- <source type="image/webp" media="(min-width: 640px)" srcset="img/gallery/felix-640px.webp 1x, img/gallery/felix-640px@2x.webp 2x">
+                  <source type="image/webp" srcset="img/gallery/felix-320px.webp 1x, img/gallery/felix-320px@2x.webp 2x">
+                  <source media="(min-width: 640px)" srcset="img/gallery/felix-640px.png 1x, img/gallery/felix-640px@2x.jpg 2x">
+                  <img src="img/gallery/felix-320px.png" srcset="img/gallery/felix-320px@2x.png 2x" alt="Фото товара."> -->
+                  <!-- <source type="image/webp" media="(min-width: 640px)" srcset="img/gallery/felix-640px.webp 1x, img/gallery/felix-640px@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/gallery/felix-640px.webp 1x, img/gallery/felix-640px@2x.webp 2x">
+                  <!-- <source media="(min-width: 640px)" srcset="img/gallery/felix-640px.png 1x, img/gallery/felix-640px@2x.jpg 2x"> -->
+                  <img src="img/gallery/felix-640px.png" srcset="img/gallery/felix-640px@2x.png 2x" alt="Фото товара.">
+                </picture>
+              </div>
+
+              <p class="gallery-list__slogan">FELIX</p>
             </li>
           </ul>
 
@@ -176,6 +216,10 @@
             </button>
           </div>
         </div>
+      </section>
+
+      <section class="opportunity">
+
       </section>
     </main>
 
