@@ -944,12 +944,11 @@ img {
   }
 }
 .gallery-list__img--cosmetics-felix {
-  width: 394px;
-  height: 352px;
+  width: 320px;
+  height: 323px;
   top: 15px;
   left: 0;
   right: 0;
-  margin: 0 auto;
 }
 @media (min-width: 640px) {
   .gallery-list__img--cosmetics-felix {
@@ -957,11 +956,11 @@ img {
     height: 352px;
     left: 0;
     right: 0;
-    margin: 0 auto;
   }
 }
 .gallery-list__img {
   position: absolute;
+  overflow: hidden;
 }
 @media (min-width: 960px) {
   .gallery-list__img {
@@ -970,8 +969,10 @@ img {
     margin: 0 auto;
   }
 }
-.gallery-list__img img {
-  object-fit: contain;
+.gallery-list__img--cosmetics-felix img {
+  width: 394px;
+  height: 352px;
+  object-fit: cover;
 }
 .gallery-list__slogan {
   display: none;
