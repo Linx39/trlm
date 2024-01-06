@@ -1,0 +1,114 @@
+.opportunities {
+  position: relative;
+  z-index: 1;
+
+  .wrapper();
+  // margin-top: -39px;
+  margin-bottom: 20px;
+
+  // @media (min-width: @sm-width) {
+  //   margin-top: -218px;
+  // }
+
+  // @media (min-width: @ml-width) {
+  //   margin-top: -150px;
+  // }
+}
+
+.opportunities__list {
+  .list();
+  display: grid;
+  gap: 10px;
+
+  @media (min-width: @sm-width) {
+    gap: 20px;
+  }
+
+  @media (min-width: @ml-width) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 20px;
+  }
+}
+
+.opportunities__item {
+  display: grid;
+  gap: 8px;
+
+  box-sizing: border-box;
+  padding: 20px;
+
+  background-color: @color-white;
+
+  @media (min-width: @sm-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content auto;
+    row-gap: 8px;
+    column-gap: 20px;
+
+    &:not(:first-of-type) {
+      min-height: 152px;
+    }
+  }
+
+  @media (min-width: @lg-width) {
+  }
+
+  @media (min-width: @xx-width) {
+  }
+}
+
+.opportunities__title {
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+
+  @media (min-width: @sm-width) {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+  }
+}
+
+.opportunities__decription {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+
+  @media (min-width: @sm-width) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+}
+
+.opportunities__phone {
+  display: block;
+
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+.opportunities__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .app__btn-border(@color-blue);
+
+  &--whatsapp {
+    gap: 6px;
+
+    .app__btn-border(@color-green);
+  }
+
+  .interactive-styles();
+
+  @media (min-width: @sm-width) {
+    grid-row: 2 / 3;
+    grid-column: -2 / -1;
+    align-self: start;
+  }
+}
