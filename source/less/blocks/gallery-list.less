@@ -5,26 +5,19 @@
 .gallery-list__item {
   position: relative;
   display: grid;
-  grid-template-columns: 10px auto 10px;
+  grid-template-columns: @xs-padding-inner auto @xs-padding-inner;
   min-height: 299px;
-  // min-height: 338px;
 
   @media (min-width: @sm-width) {
-    grid-template-columns: 20px auto 20px;
-    // min-height: 517px;
-  }
-
-  @media (min-width: @ml-width) {
-    // min-height: 555px;
+    grid-template-columns: @sm-padding-inner auto @sm-padding-inner;
   }
 
   @media (min-width: @lg-width) {
-    grid-template-columns: 30px auto auto 30px;
-    // min-height: 539px;
+    grid-template-columns: @lg-padding-inner auto auto @lg-padding-inner;
   }
 
   @media (min-width: @xx-width) {
-    grid-template-columns: 190px auto auto 190px;
+    grid-template-columns: @xx-padding-inner auto auto @xx-padding-inner;
   }
 
   &::before {
@@ -39,6 +32,18 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (min-width: @sm-width) {
+      height: 517px;
+    }
+
+    @media (min-width: @ml-width) {
+      height: 555px;
+    }
+
+    @media (min-width: @lg-width) {
+      height: 539px;
+    }
   }
 }
 
@@ -55,42 +60,34 @@
 }
 
 .gallery-list__img {
+  position: relative;
+  z-index: -1;
+
   grid-row: 1 / -1;
   grid-column: 1 / -1;
+
   overflow: hidden;
-
-  box-sizing: border-box;
-  // height: 338px;
-
-  @media (min-width: @sm-width) {
-    height: auto;
-  }
 }
 
-.gallery-list__img--oil-champion {
-  padding-top: 27px;
+.gallery-list__img img {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
 
-  @media (min-width: @sm-width) {
-    padding-top: 15px;
-  }
-}
+  margin: 0 auto;
 
-.gallery-list__img--cosmetics-felix {
-  padding-top: 15px;
-}
-
-.gallery-list__img--oil-felix {
-  padding-top: 15px;
+  object-fit: cover;
 }
 
 .gallery-list__img--oil-champion img {
+  top: 27px;
   width: 191px;
-  // height: 298px;
+  height: 298px;
   margin-left: 46.6%;
 
-  object-fit: cover;
-
   @media (min-width: @sm-width) {
+    top: 15px;
     width: 297px;
     height: 464px;
     margin-left: 49.2%;
@@ -104,17 +101,11 @@
 .gallery-list__img--cosmetics-felix img {
   width: 394px;
   height: 352px;
-  margin: 0 auto;
-
-  object-fit: cover;
 }
 
 .gallery-list__img--oil-felix img {
   width: 269px;
   height: 330px;
-  margin: 0 auto;
-
-  object-fit: cover;
 }
 
 .gallery-list__content {
@@ -184,6 +175,8 @@
   line-height: 24px;
   font-weight: 700;
   text-transform: uppercase;
+
+  .interactive-styles();
 }
 
 .gallery-list__btn-caption {

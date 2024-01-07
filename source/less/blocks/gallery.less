@@ -1,9 +1,5 @@
 .gallery {
-  .wrapper();
-
-  @media (max-width: (@ml-width - 1)) {
-    padding: 0;
-  }
+  .wrapper-outer();
 }
 
 .gallery__slider {
@@ -22,15 +18,15 @@
   justify-content: end;
 
   @media (min-width: @sm-width) {
-    right: 20px;
+    right: @sm-padding-inner;
   }
 
   @media (min-width: @lg-width) {
-    right: 30px;
+    right: @lg-padding-inner;
   }
 
   @media (min-width: @xx-width) {
-    right: 190px;
+    right: @xx-padding-inner;
   }
 }
 
@@ -51,7 +47,10 @@
 
   &--disabled {
     opacity: 0.4;
+    cursor: default;
   }
+
+  .interactive-styles();
 
   @media (min-width: @sm-width) {
     width: 80px;
