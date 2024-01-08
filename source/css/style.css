@@ -807,34 +807,16 @@ img {
 .main-nav--default .main-nav__catalog-menu {
   display: none;
 }
-.gallery-list {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.gallery-list__item {
+.gallery-item {
   position: relative;
-  display: grid;
-  grid-template-columns: 10px auto 10px;
-  min-height: 299px;
-}
-@media (min-width: 640px) {
-  .gallery-list__item {
-    grid-template-columns: 20px auto 20px;
-  }
 }
 @media (min-width: 1280px) {
-  .gallery-list__item {
-    grid-template-columns: 30px auto auto 30px;
+  .gallery-item {
+    display: grid;
+    grid-template-columns: auto auto;
   }
 }
-@media (min-width: 1920px) {
-  .gallery-list__item {
-    grid-template-columns: 190px auto auto 190px;
-  }
-}
-.gallery-list__item::before {
+.gallery-item::before {
   position: absolute;
   content: "";
   top: 0;
@@ -847,148 +829,98 @@ img {
   background-size: cover;
 }
 @media (min-width: 640px) {
-  .gallery-list__item::before {
+  .gallery-item::before {
     height: 517px;
   }
 }
 @media (min-width: 960px) {
-  .gallery-list__item::before {
+  .gallery-item::before {
     height: 555px;
   }
 }
 @media (min-width: 1280px) {
-  .gallery-list__item::before {
+  .gallery-item::before {
     height: 539px;
   }
 }
-.gallery-list__item--oil-champion::before {
+.gallery-item--oil-champion::before {
   background-image: -webkit-image-set(url("../../img/gallery-back/blue-back-320px.webp") type("image/webp") 1x, url("../../img/gallery-back/blue-back-320px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/blue-back-320px.png") type("image/png") 1x, url("../../img/gallery-back/blue-back-320px@2x.png") type("image/png") 2x);
   background-image: image-set(url("../../img/gallery-back/blue-back-320px.webp") type("image/webp") 1x, url("../../img/gallery-back/blue-back-320px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/blue-back-320px.png") type("image/png") 1x, url("../../img/gallery-back/blue-back-320px@2x.png") type("image/png") 2x);
 }
 @media (min-width: 640px) {
-  .gallery-list__item--oil-champion::before {
+  .gallery-item--oil-champion::before {
     background-image: -webkit-image-set(url("../../img/gallery-back/blue-back-640px.webp") type("image/webp") 1x, url("../../img/gallery-back/blue-back-640px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/blue-back-640px.png") type("image/png") 1x, url("../../img/gallery-back/blue-back-640px@2x.png") type("image/png") 2x);
     background-image: image-set(url("../../img/gallery-back/blue-back-640px.webp") type("image/webp") 1x, url("../../img/gallery-back/blue-back-640px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/blue-back-640px.png") type("image/png") 1x, url("../../img/gallery-back/blue-back-640px@2x.png") type("image/png") 2x);
   }
 }
 @media (min-width: 960px) {
-  .gallery-list__item--oil-champion::before {
+  .gallery-item--oil-champion::before {
     background-image: -webkit-image-set(url("../../img/gallery-back/blue-back-1820px.webp") type("image/webp") 1x, url("../../img/gallery-back/blue-back-1820px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/blue-back-1820px.png") type("image/png") 1x, url("../../img/gallery-back/blue-back-1820px@2x.png") type("image/png") 2x);
     background-image: image-set(url("../../img/gallery-back/blue-back-1820px.webp") type("image/webp") 1x, url("../../img/gallery-back/blue-back-1820px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/blue-back-1820px.png") type("image/png") 1x, url("../../img/gallery-back/blue-back-1820px@2x.png") type("image/png") 2x);
   }
 }
-.gallery-list__item--cosmetics-felix::before {
+.gallery-item--cosmetics-felix::before {
   background-image: -webkit-image-set(url("../../img/gallery-back/grey-back-320px.webp") type("image/webp") 1x, url("../../img/gallery-back/grey-back-320px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/grey-back-320px.png") type("image/png") 1x, url("../../img/gallery-back/grey-back-320px@2x.png") type("image/png") 2x);
   background-image: image-set(url("../../img/gallery-back/grey-back-320px.webp") type("image/webp") 1x, url("../../img/gallery-back/grey-back-320px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/grey-back-320px.png") type("image/png") 1x, url("../../img/gallery-back/grey-back-320px@2x.png") type("image/png") 2x);
 }
 @media (min-width: 640px) {
-  .gallery-list__item--cosmetics-felix::before {
+  .gallery-item--cosmetics-felix::before {
     background-image: -webkit-image-set(url("../../img/gallery-back/grey-back-640px.webp") type("image/webp") 1x, url("../../img/gallery-back/grey-back-640px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/grey-back-640px.png") type("image/png") 1x, url("../../img/gallery-back/grey-back-640px@2x.png") type("image/png") 2x);
     background-image: image-set(url("../../img/gallery-back/grey-back-640px.webp") type("image/webp") 1x, url("../../img/gallery-back/grey-back-640px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/grey-back-640px.png") type("image/png") 1x, url("../../img/gallery-back/grey-back-640px@2x.png") type("image/png") 2x);
   }
 }
 @media (min-width: 960px) {
-  .gallery-list__item--cosmetics-felix::before {
+  .gallery-item--cosmetics-felix::before {
     background-image: -webkit-image-set(url("../../img/gallery-back/grey-back-1820px.webp") type("image/webp") 1x, url("../../img/gallery-back/grey-back-1820px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/grey-back-1820px.png") type("image/png") 1x, url("../../img/gallery-back/grey-back-1820px@2x.png") type("image/png") 2x);
     background-image: image-set(url("../../img/gallery-back/grey-back-1820px.webp") type("image/webp") 1x, url("../../img/gallery-back/grey-back-1820px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/grey-back-1820px.png") type("image/png") 1x, url("../../img/gallery-back/grey-back-1820px@2x.png") type("image/png") 2x);
   }
 }
-.gallery-list__item--oil-felix::before {
+.gallery-item--oil-felix::before {
   background-image: -webkit-image-set(url("../../img/gallery-back/yellow-back-320px.webp") type("image/webp") 1x, url("../../img/gallery-back/yellow-back-320px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/yellow-back-320px.png") type("image/png") 1x, url("../../img/gallery-back/yellow-back-320px@2x.png") type("image/png") 2x);
   background-image: image-set(url("../../img/gallery-back/yellow-back-320px.webp") type("image/webp") 1x, url("../../img/gallery-back/yellow-back-320px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/yellow-back-320px.png") type("image/png") 1x, url("../../img/gallery-back/yellow-back-320px@2x.png") type("image/png") 2x);
 }
 @media (min-width: 640px) {
-  .gallery-list__item--oil-felix::before {
+  .gallery-item--oil-felix::before {
     background-image: -webkit-image-set(url("../../img/gallery-back/yellow-back-640px.webp") type("image/webp") 1x, url("../../img/gallery-back/yellow-back-640px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/yellow-back-640px.png") type("image/png") 1x, url("../../img/gallery-back/yellow-back-640px@2x.png") type("image/png") 2x);
     background-image: image-set(url("../../img/gallery-back/yellow-back-640px.webp") type("image/webp") 1x, url("../../img/gallery-back/yellow-back-640px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/yellow-back-640px.png") type("image/png") 1x, url("../../img/gallery-back/yellow-back-640px@2x.png") type("image/png") 2x);
   }
 }
 @media (min-width: 960px) {
-  .gallery-list__item--oil-felix::before {
+  .gallery-item--oil-felix::before {
     background-image: -webkit-image-set(url("../../img/gallery-back/yellow-back-1820px.webp") type("image/webp") 1x, url("../../img/gallery-back/yellow-back-1820px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/yellow-back-1820px.png") type("image/png") 1x, url("../../img/gallery-back/yellow-back-1820px@2x.png") type("image/png") 2x);
     background-image: image-set(url("../../img/gallery-back/yellow-back-1820px.webp") type("image/webp") 1x, url("../../img/gallery-back/yellow-back-1820px@2x.webp") type("image/webp") 2x, url("../../img/gallery-back/yellow-back-1820px.png") type("image/png") 1x, url("../../img/gallery-back/yellow-back-1820px@2x.png") type("image/png") 2x);
   }
 }
-.gallery-list__img {
-  position: relative;
-  z-index: -1;
-  grid-row: 1 / -1;
-  grid-column: 1 / -1;
-  overflow: hidden;
-}
-.gallery-list__img img {
-  position: absolute;
-  top: 15px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  object-fit: cover;
-}
-.gallery-list__img--oil-champion img {
-  top: 27px;
-  width: 191px;
-  height: 298px;
-  margin-left: 46.6%;
-}
-@media (min-width: 640px) {
-  .gallery-list__img--oil-champion img {
-    top: 15px;
-    width: 297px;
-    height: 464px;
-    margin-left: 49.2%;
-  }
-}
-@media (min-width: 960px) {
-  .gallery-list__img--oil-champion img {
-    margin: 0 auto;
-  }
-}
-.gallery-list__img--cosmetics-felix img {
-  width: 394px;
-  height: 352px;
-}
-.gallery-list__img--oil-felix img {
-  width: 269px;
-  height: 330px;
-}
-.gallery-list__content {
-  grid-row: 1 / -1;
-  grid-column: 2 / 3;
+.gallery-item__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   width: min-content;
-  padding-top: 27px;
 }
 @media (min-width: 640px) {
-  .gallery-list__content {
+  .gallery-item__content {
     width: 360px;
-    padding-top: 40px;
   }
 }
 @media (min-width: 960px) {
-  .gallery-list__content {
-    padding-top: 40px;
+  .gallery-item__content {
     padding-left: 10px;
   }
 }
 @media (min-width: 1280px) {
-  .gallery-list__content {
-    padding-top: 40px;
+  .gallery-item__content {
     padding-left: 0;
   }
 }
-@media (min-width: 1920px) {
-  .gallery-list__content {
-    padding-top: 40px;
-  }
-}
-.gallery-list__logo {
+.gallery-item__logo {
   margin-bottom: 10px;
 }
 @media (min-width: 640px) {
-  .gallery-list__logo {
+  .gallery-item__logo {
     margin-bottom: 8px;
   }
 }
-.gallery-list__description {
+.gallery-item__description {
   display: flex;
   align-items: center;
   min-height: 172px;
@@ -1000,14 +932,14 @@ img {
   font-weight: 700;
 }
 @media (min-width: 640px) {
-  .gallery-list__description {
+  .gallery-item__description {
     min-height: 148px;
     margin-bottom: 7px;
     font-size: 42px;
     line-height: 49px;
   }
 }
-.gallery-list__btn {
+.gallery-item__btn {
   display: inline-block;
   box-sizing: border-box;
   padding: 0;
@@ -1025,29 +957,27 @@ img {
   font-weight: 700;
   text-transform: uppercase;
 }
-.gallery-list__btn:hover {
+.gallery-item__btn:hover {
   opacity: 0.3;
 }
-.gallery-list__btn:focus-within {
+.gallery-item__btn:focus-within {
   opacity: 0.3;
   outline: none;
 }
-.gallery-list__btn:active {
+.gallery-item__btn:active {
   opacity: 0.1;
 }
-.gallery-list__btn-caption {
+.gallery-item__btn-caption {
   margin-right: 16px;
 }
-.gallery-list__btn-icon {
+.gallery-item__btn-icon {
   color: #1C69D4;
 }
-.gallery-list__slogan {
+.gallery-item__slogan {
   display: none;
 }
 @media (min-width: 1280px) {
-  .gallery-list__slogan {
-    grid-row: 1 / -1;
-    grid-column: -2 / -3;
+  .gallery-item__slogan {
     justify-self: end;
     display: block;
     padding: 0;
@@ -1058,6 +988,46 @@ img {
     line-height: 72px;
     font-weight: 300;
   }
+}
+.gallery-item__img-container {
+  position: relative;
+  overflow: hidden;
+}
+.gallery-item__img {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  margin: 0 auto;
+  object-fit: cover;
+}
+.gallery-item--oil-champion .gallery-item__img {
+  top: 27px;
+  width: 191px;
+  height: 298px;
+  margin-left: 46.6%;
+}
+@media (min-width: 640px) {
+  .gallery-item--oil-champion .gallery-item__img {
+    top: 15px;
+    width: 297px;
+    height: 464px;
+    margin-left: 49.2%;
+  }
+}
+@media (min-width: 960px) {
+  .gallery-item--oil-champion .gallery-item__img {
+    margin: 0 auto;
+  }
+}
+.gallery-item--cosmetics-felix .gallery-item__img {
+  width: 394px;
+  height: 352px;
+}
+.gallery-item--oil-felix .gallery-item__img {
+  width: 269px;
+  height: 330px;
 }
 .slider__item:not(.slider__item--current) {
   display: none;
@@ -1097,6 +1067,50 @@ img {
 }
 .gallery__slider {
   position: relative;
+}
+.gallery__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.gallery__item {
+  box-sizing: border-box;
+  min-height: 299px;
+  padding: 0 10px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+@media (min-width: 640px) {
+  .gallery__item {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 960px) {
+  .gallery__item {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery__item {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .gallery__item {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1920px) {
+  .gallery__item {
+    padding: 0 190px;
+  }
+}
+@media (min-width: 640px) {
+  .gallery__item {
+    padding-top: 40px;
+    padding-bottom: 39px;
+  }
 }
 .gallery__controls {
   position: absolute;
@@ -1261,7 +1275,7 @@ img {
   box-sizing: border-box;
   padding: 20px;
   background-color: #FFFFFF;
-  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.04), 0px 2px 6px 0px rgba(0, 0, 0, 0.04), 0px 10px 20px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.04), 0 2px 6px 0 rgba(0, 0, 0, 0.04), 0 10px 20px 0 rgba(0, 0, 0, 0.04);
 }
 @media (min-width: 640px) {
   .opportunities__item {
@@ -1399,17 +1413,18 @@ img {
     display: none;
   }
 }
-.offer {
+.offers-item {
   position: relative;
+  overflow: hidden;
   color: #FFFFFF;
 }
-.offer--awm {
+.offers-item--awm {
   background-color: #01B7E6;
 }
-.offer--dot4 {
+.offers-item--dot4 {
   background-color: #587478;
 }
-.offer__content {
+.offers-item__content {
   position: relative;
   z-index: 1;
   display: flex;
@@ -1418,48 +1433,50 @@ img {
   align-items: start;
   height: 100%;
 }
-.offer__slogan {
+.offers-item__slogan {
   margin: 0;
   font-size: 20px;
   line-height: 24px;
   font-weight: 400;
 }
 @media (min-width: 1280px) {
-  .offer--awm .offer__slogan {
+  .offers-item--awm .offers-item__slogan {
     font-size: 20px;
     line-height: 20px;
     font-weight: 900;
   }
 }
-.offer__title {
-  width: min-content;
+.offers-item__title {
   margin: 0;
   font-size: 23px;
   line-height: 30px;
   font-weight: 700;
 }
 @media (min-width: 1280px) {
-  .offer--awm .offer__title {
+  .offers-item--awm .offers-item__title {
     font-size: 20px;
     line-height: 20px;
     font-weight: 900;
   }
 }
 @media (min-width: 1600px) {
-  .offer--awm .offer__title {
+  .offers-item--awm .offers-item__title {
     width: min-content;
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
   }
 }
+.offers-item--dot4 .offers-item__title {
+  width: min-content;
+}
 @media (min-width: 1280px) {
-  .offer--dot4 .offer__title {
+  .offers-item--dot4 .offers-item__title {
     font-size: 30px;
     line-height: 36px;
   }
 }
-.offer__button {
+.offers-item__button {
   justify-self: start;
   display: inline-block;
   box-sizing: border-box;
@@ -1480,11 +1497,21 @@ img {
   text-transform: uppercase;
   text-align: start;
 }
-.offer__label {
+.offers-item__button:hover {
+  opacity: 0.3;
+}
+.offers-item__button:focus-within {
+  opacity: 0.3;
+  outline: none;
+}
+.offers-item__button:active {
+  opacity: 0.1;
+}
+.offers-item__label {
   display: none;
 }
 @media (min-width: 1280px) {
-  .offer__label {
+  .offers-item__label {
     position: absolute;
     top: 40px;
     right: 40px;
@@ -1499,37 +1526,36 @@ img {
     text-align: center;
   }
 }
-.offer__img {
-  overflow: hidden;
-}
-.offer--awm img {
+.offers-item--awm img {
   position: absolute;
-  width: 300px;
+  width: 361px;
   height: 252px;
   top: 0;
   left: 0;
+  object-fit: cover;
+  object-position: -7px top;
 }
 @media (min-width: 960px) {
-  .offer--awm img {
+  .offers-item--awm img {
     width: 361px;
     left: 13.5%;
   }
 }
-.offer--dot4 img {
+.offers-item--dot4 img {
   position: absolute;
   width: 96px;
-  height: 230px;
+  height: 240px;
   top: 21px;
   left: 64.3%;
 }
 @media (min-width: 960px) {
-  .offer--dot4 img {
+  .offers-item--dot4 img {
     height: 240px;
     left: 60%;
   }
 }
 @media (min-width: 1280px) {
-  .offer__img img {
+  .offers-item__img img {
     width: 100%;
     height: 100%;
     top: 0;

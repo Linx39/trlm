@@ -1,0 +1,183 @@
+.gallery-item {
+  position: relative;
+  // overflow: hidden;
+
+  @media (min-width: @lg-width) {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 338px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: @sm-width) {
+      height: 517px;
+    }
+
+    @media (min-width: @ml-width) {
+      height: 555px;
+    }
+
+    @media (min-width: @lg-width) {
+      height: 539px;
+    }
+  }
+}
+
+.gallery-item--oil-champion::before {
+  .gallery-background("blue-back");
+}
+
+.gallery-item--cosmetics-felix::before {
+  .gallery-background("grey-back");
+}
+
+.gallery-item--oil-felix::before {
+  .gallery-background("yellow-back");
+}
+
+.gallery-item__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  width: min-content;
+
+  @media (min-width: @sm-width) {
+    width: 360px;
+  }
+
+  @media (min-width: @ml-width) {
+    padding-left: 10px;
+  }
+
+  @media (min-width: @lg-width) {
+    padding-left: 0;
+  }
+}
+
+.gallery-item__logo {
+  margin-bottom: 10px;
+
+  @media (min-width: @sm-width) {
+    margin-bottom: 8px;
+  }
+}
+
+.gallery-item__description {
+  display: flex;
+  align-items: center;
+  min-height: 172px;
+  margin: 0;
+  margin-bottom: 5px;
+
+  color: @color-white;
+
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+
+  @media (min-width: @sm-width) {
+    min-height: 148px;
+    margin-bottom: 7px;
+
+    font-size: 42px;
+    line-height: 49px;
+  }
+}
+
+.gallery-item__btn {
+  .button();
+
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  .interactive-styles();
+}
+
+.gallery-item__btn-caption {
+  margin-right: 16px;
+}
+
+.gallery-item__btn-icon {
+  color: @color-blue;
+}
+
+.gallery-item__slogan {
+  display: none;
+
+  @media (min-width: @lg-width) {
+    justify-self: end;
+
+    display: block;
+    padding: 0;
+    padding-top: 147px;
+    margin: 0;
+
+    color: @color-white;
+
+    font-size: 75px;
+    line-height: 72px;
+    font-weight: 300;
+  }
+}
+
+.gallery-item__img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item__img {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  margin: 0 auto;
+
+  object-fit: cover;
+}
+
+.gallery-item--oil-champion .gallery-item__img {
+  top: 27px;
+  width: 191px;
+  height: 298px;
+  margin-left: 46.6%;
+
+  @media (min-width: @sm-width) {
+    top: 15px;
+    width: 297px;
+    height: 464px;
+    margin-left: 49.2%;
+  }
+
+  @media (min-width: @ml-width) {
+    margin: 0 auto;
+  }
+}
+
+.gallery-item--cosmetics-felix .gallery-item__img {
+  width: 394px;
+  height: 352px;
+}
+
+.gallery-item--oil-felix .gallery-item__img {
+  width: 269px;
+  height: 330px;
+}
