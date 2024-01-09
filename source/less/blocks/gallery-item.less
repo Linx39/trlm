@@ -1,11 +1,5 @@
 .gallery-item {
   position: relative;
-  // overflow: hidden;
-
-  @media (min-width: @lg-width) {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
 
   &::before {
     position: absolute;
@@ -44,6 +38,16 @@
 
 .gallery-item--oil-felix::before {
   .gallery-background("yellow-back");
+}
+
+.gallery-item__wrapper {
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: @lg-width) {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 }
 
 .gallery-item__content {
@@ -126,7 +130,7 @@
 
     display: block;
     padding: 0;
-    padding-top: 147px;
+    padding-top: 102px;
     margin: 0;
 
     color: @color-white;
@@ -135,11 +139,6 @@
     line-height: 72px;
     font-weight: 300;
   }
-}
-
-.gallery-item__img-container {
-  position: relative;
-  overflow: hidden;
 }
 
 .gallery-item__img {
