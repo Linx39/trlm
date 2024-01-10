@@ -13,9 +13,25 @@
 }
 
 .page__body {
+  position: relative;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
 
   min-height: 100%;
   margin: 0;
+}
+
+.page__body--modal::before {
+  @media (max-width: (@ml-width - 1)) {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(@color-black, 0.5);
+    overflow: auto;
+  }
 }

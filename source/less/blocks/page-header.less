@@ -1,7 +1,17 @@
 .page-header {
+  // position: relative;
+
+  min-height: 166px;
+
   background-color: @color-white;
 
+
+  @media (min-width: @sm-width) {
+    min-height: 130px;
+  }
+
   @media (min-width: @ml-width) {
+    min-height: auto;
     margin-bottom: 20px;
   }
 

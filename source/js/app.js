@@ -1,12 +1,7 @@
-const gallerySlider = document.querySelector(`.gallery__slider`);
+import {handleSiteMenuToogleClick} from "./site-menu-toggle.js";
+import {handleSliderButtonClick} from "./slider.js";
 
-const sliderList = document.querySelector(`.slider__list`);
+handleSiteMenuToogleClick();
 
-const sliderBtnPrev = document.querySelector(`.slider__btn--prev`);
-const sliderBtnNext = document.querySelector(`.slider__btn--next`);
-
-const sliderItem = sliderList.children;
-
-sliderBtnNext.addEventListener(`click`, () => {
-  console.log(sliderItem);
-})
+const GALLERY_CONTROLS_BTN_DISABLED_CLASS = `gallery-controls__btn--disabled`;
+handleSliderButtonClick(GALLERY_CONTROLS_BTN_DISABLED_CLASS);

@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
 
-  <body class="page__body">
+  <body class="page__body page__body--modal">
     <header class="page-header">
       <h1 class="visually-hidden">Магазин автозапчастей trlm</h1>
-      <nav class="main-nav main-nav--default main-nav--nojs">
+      <nav class="main-nav main-nav--site-list-opened">
         <div class="main-nav__bottom-bar"></div>
 
         <a class="main-nav__logo logo-link" tabindex="0">
@@ -30,32 +30,32 @@
         <a class="main-nav__phone phone-link" href="88005501980">8-800-550-19-80</a>
 
         <button class="main-nav__site-menu-toggle site-menu-toggle" type="button">
-          <svg class="site-menu-toggle__icon site-menu-toggle__icon--open" width="22" height="15" aria-hidden="true" focusable="false">
+          <svg class="main-nav__site-menu-toggle main-nav__site-menu-toggle-icon--open site-menu-toggle__icon site-menu-toggle__icon--open" width="22" height="15" aria-hidden="true" focusable="false">
             <use xlink:href="img/sprite.svg#menu-burger"></use>
           </svg>
-          <svg class="site-menu-toggle__icon site-menu-toggle__icon--close" width="23" height="23" aria-hidden="true" focusable="false">
+          <svg class="main-nav__site-menu-toggle main-nav__site-menu-toggle-icon--close site-menu-toggle__icon site-menu-toggle__icon--close" width="14" height="14" aria-hidden="true" focusable="false">
             <use xlink:href="img/sprite.svg#close-icon"></use>
           </svg>
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
         <ul class="main-nav__site-menu-list site-list">
-          <li class="site-list__item">
+          <li class="main-nav__site-menu-item main-nav__site-menu-item site-list__item">
             <a class="site-list__link site-list__link--current" href="#">Подбор запчастей</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__site-menu-item site-list__item">
             <a class="site-list__link" href="#">Доставка</a>
           </li>
-          <li class="site-list__item site-list__item--buy">
+          <li class="main-nav__site-menu-item site-list__item main-nav__site-menu-item site-list__item--buy">
             <a class="site-list__link" href="#">Как купить</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__site-menu-item site-list__item">
             <a class="site-list__link" href="#">Оплата</a>
           </li>
-          <li class="site-list__item site-list__item--promotion">
+          <li class="main-nav__site-menu-item site-list__item main-nav__site-menu-item site-list__item--promotion">
             <a class="site-list__link" href="#">Акции</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__site-menu-item site-list__item">
             <a class="site-list__link" href="#">Контакты</a>
           </li>
         </ul>
