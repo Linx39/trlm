@@ -1,16 +1,4 @@
-.site-list {
-  .list();
-
-  // @media (min-width: @ml-width) {
-  //   display: flex;
-  // }
-}
-
-.site-list__item {
-  // &:not(:last-of-type) {
-  //   margin-right: 45px;
-  // }
-
+.site-item {
   @media (min-width: @lg-width) {
     &--buy {
       display: none;
@@ -32,7 +20,8 @@
   }
 }
 
-.site-list__link {
+.site-item__link {
+  position: relative;
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -43,10 +32,6 @@
   font-weight: 400;
   text-decoration: none;
   vertical-align: middle;
-  
-  &--current {
-    font-weight: 700;
-  }
 
   .interactive-styles();
 }

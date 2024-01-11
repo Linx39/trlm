@@ -1,7 +1,8 @@
-import {handleSiteMenuToogleClick} from "./site-menu-toggle.js";
-import {handleSliderButtonClick} from "./slider.js";
+import {handleSiteToogleClick} from "./site-toggle.js";
+import {handleSliderButtonsClick} from "./slider.js";
 
-handleSiteMenuToogleClick();
+handleSiteToogleClick();
 
-const GALLERY_CONTROLS_BTN_DISABLED_CLASS = `gallery-controls__btn--disabled`;
-handleSliderButtonClick(GALLERY_CONTROLS_BTN_DISABLED_CLASS);
+const CONTROLS_BTN_DISABLED_CLASS = `gallery-controls__btn--disabled`;
+
+handleSliderButtonsClick(CONTROLS_BTN_DISABLED_CLASS);

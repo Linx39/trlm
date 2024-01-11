@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
 
-  <body class="page__body page__body--modal">
+  <body class="page__body">
     <header class="page-header">
       <h1 class="visually-hidden">Магазин автозапчастей trlm</h1>
-      <nav class="main-nav main-nav--site-list-opened">
+      <nav class="main-nav">
         <div class="main-nav__bottom-bar"></div>
 
         <a class="main-nav__logo logo-link" tabindex="0">
-          <img class="logo-link__img" src="./img/logo.svg"  alt="Логотип компании trim." width="80" height="88">
+          <img class="logo-link__img" src="./img/logo.png"  alt="Логотип компании trim." width="80" height="88">
           <span class="logo-link__name">trlm.ru</span>
         </a>
 
@@ -29,69 +29,65 @@
 
         <a class="main-nav__phone phone-link" href="88005501980">8-800-550-19-80</a>
 
-        <button class="main-nav__site-menu-toggle site-menu-toggle" type="button">
-          <svg class="main-nav__site-menu-toggle main-nav__site-menu-toggle-icon--open site-menu-toggle__icon site-menu-toggle__icon--open" width="22" height="15" aria-hidden="true" focusable="false">
-            <use xlink:href="img/sprite.svg#menu-burger"></use>
-          </svg>
-          <svg class="main-nav__site-menu-toggle main-nav__site-menu-toggle-icon--close site-menu-toggle__icon site-menu-toggle__icon--close" width="14" height="14" aria-hidden="true" focusable="false">
-            <use xlink:href="img/sprite.svg#close-icon"></use>
-          </svg>
+        <button class="main-nav__site-toggle site-toggle" type="button">
+          <span class="site-toggle__icon-container">
+            <svg class="main-nav__site-toggle-icon main-nav__site-toggle-icon--open site-toggle__icon site-toggle__icon--open" width="22" height="15" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#burger-half"></use>
+            </svg>
+            <svg class="main-nav__site-toggle-icon main-nav__site-toggle-icon--close site-toggle__icon site-toggle__icon--close" width="14" height="14" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#cross"></use>
+            </svg>
+          </span>
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
-        <ul class="main-nav__site-menu-list site-list">
-          <li class="main-nav__site-menu-item main-nav__site-menu-item site-list__item">
-            <a class="site-list__link site-list__link--current" href="#">Подбор запчастей</a>
+        <ul class="main-nav__site-list">
+          <li class="main-nav__site-item site-item">
+            <a class="main-nav__site-link main-nav__site-link--special site-item__link" href="#">Подбор запчастей</a>
           </li>
-          <li class="main-nav__site-menu-item site-list__item">
-            <a class="site-list__link" href="#">Доставка</a>
+          <li class="main-nav__site-item site-item">
+            <a class="main-nav__site-link site-item__link" href="#">Доставка</a>
           </li>
-          <li class="main-nav__site-menu-item site-list__item main-nav__site-menu-item site-list__item--buy">
-            <a class="site-list__link" href="#">Как купить</a>
+          <li class="main-nav__site-item site-item main-nav__site-item site-item--buy">
+            <a class="main-nav__site-link site-item__link" href="#">Как купить</a>
           </li>
-          <li class="main-nav__site-menu-item site-list__item">
-            <a class="site-list__link" href="#">Оплата</a>
+          <li class="main-nav__site-item site-item">
+            <a class="main-nav__site-link site-item__link" href="#">Оплата</a>
           </li>
-          <li class="main-nav__site-menu-item site-list__item main-nav__site-menu-item site-list__item--promotion">
-            <a class="site-list__link" href="#">Акции</a>
+          <li class="main-nav__site-item site-item main-nav__site-item site-item--promotion">
+            <a class="main-nav__site-link site-item__link" href="#">Акции</a>
           </li>
-          <li class="main-nav__site-menu-item site-list__item">
-            <a class="site-list__link" href="#">Контакты</a>
+          <li class="main-nav__site-item site-item">
+            <a class="main-nav__site-link site-item__link" href="#">Контакты</a>
           </li>
         </ul>
 
         <ul class="main-nav__user-list user-list">
           <li class="user-list__item">
-            <a class="user-list__link user-list__link-auth" href="#">
-              <svg class="user-list__link-icon" width="19" height="20" aria-hidden="true" focusable="false">
-                <use xlink:href="img/sprite.svg#user"></use>
-              </svg>
+            <a class="user-list__link user-list__link--auth" href="#">
               <span class="user-list__link-subtitle">Войти</span>
             </a>
           </li>
           <li class="user-list__item">
-            <a class="user-list__link user-list__link-cart" href="#">
-              <svg class="user-list__link-icon" width="24" height="24" aria-hidden="true" focusable="false">
-                <use xlink:href="img/sprite.svg#cart"></use>
-              </svg>
+            <a class="user-list__link user-list__link--cart" href="#">
               <span class="user-list__link-subtitle">Корзина</span>
             </a>
           </li>
         </ul>
 
-        <button class="main-nav__catalog-menu-toggle catalog-menu-toggle app__btn" type="button">
-          <div class="catalog-menu-toggle__icon-container">
-            <svg class="catalog-menu-toggle__icon catalog-menu-toggle__icon--open" width="22" height="15" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#catalog-burger"></use>
+        <button class="main-nav__catalog-toggle catalog-toggle app-btn" type="button">
+          <span class="catalog-toggle__icon-container">
+            <svg class="main-nav__catalog-toggle-icon main-nav__catalog-toggle-icon--open catalog-toggle__icon catalog-toggle__icon--open" width="22" height="15" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#burger"></use>
             </svg>
-            <svg class="catalog-menu-toggle__icon catalog-menu-toggle__icon--close" width="23" height="23" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#close-icon"></use>
+            <svg class="main-nav__catalog-toggle-icon main-nav__catalog-toggle-icon--close catalog-toggle__icon catalog-toggle__icon--close" width="14" height="14" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#cross"></use>
             </svg>
-          </div>
-          <span class="catalog-menu-toggle__title">Каталог</span>
+          </span>
+          <span class="catalog-toggle__title">Каталог</span>
         </button>
 
-        <div class="main-nav__catalog-menu">
+        <div class="main-nav__catalog">
           <ul class="main-nav__products-list products-list">
             <li class="products-list__item">
               <a class="products-list__link" href="#">РАСХОДНЫЕ ЖИДКОСТИ</a>
@@ -120,20 +116,15 @@
           </ul>
         </div>
 
-        <div class="main-nav__search search">
-          <button class="main-nav__search-btn search__btn">
-            <svg class="search__btn-icon" width="18" height="18" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#search"></use>
-            </svg>
-            <span class="visually-hidden">Поиск на сайте</span>
-          </button>
+        <button class="main-nav__search-btn search-btn">
+          <span class="visually-hidden">Поиск на сайте</span>
+        </button>
 
-          <form class="main-nav__search-form search__form" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="visually-hidden" for="search"></label>
-            <input class="search__form-input" type="text" name="search" id="search" placeholder="Что ищете?">
-            <button class="visually-hidden" type="submit">Найти</button>
-          </form>
-        </div>
+        <form class="main-nav__search-form search-form" action="https://echo.htmlacademy.ru/" method="get">
+          <label class="visually-hidden" for="search"></label>
+          <input class="search-form__input" type="text" name="search" id="search" placeholder="Что ищете?">
+          <button class="visually-hidden" type="submit">Найти</button>
+        </form>
       </nav>
     </header>
 
@@ -147,14 +138,9 @@
               <div class="gallery__item-wrapper gallery-item__wrapper">
                 <div class="gallery-item__content">
                   <h3 class="visually-hidden">Моторное масло Champion</h3>
-                  <img class="gallery-item__logo" src="./img/logo-champion.svg"  alt="Логотип компании Champion." width="122" height="33">
+                  <img class="gallery-item__logo" src="./img/logo-champion.png"  alt="Логотип компании Champion." width="122" height="33">
                   <p class="gallery-item__description">Фильтр масла в&nbsp;подарок</p>
-                  <a class="gallery-item__btn" href="#">
-                    <span class="gallery-item__btn-caption">Подробнее</span>
-                    <svg class="gallery-item__btn-icon" width="39" height="22" aria-hidden="true" focusable="false">
-                      <use xlink:href="img/sprite.svg#more"></use>
-                    </svg>
-                  </a>
+                  <a class="gallery-item__btn" href="#">Подробнее</a>
                 </div>
 
                 <p class="gallery-item__slogan">New Energy</p>
@@ -170,14 +156,9 @@
               <div class="gallery__item-wrapper gallery-item__wrapper">
                 <div class="gallery-item__content">
                   <h3 class="visually-hidden">Очиститель Felix</h3>
-                  <img class="gallery-item__logo" src="./img/logo-felix.svg"  alt="Логотип компании Felix." width="114" height="40">
+                  <img class="gallery-item__logo" src="./img/logo-felix.png"  alt="Логотип компании Felix." width="114" height="40">
                   <p class="gallery-item__description">Комплект бесконтактной мойки</p>
-                  <a class="gallery-item__btn" href="#">
-                    <span class="gallery-item__btn-caption">Подробнее</span>
-                    <svg class="gallery-item__btn-icon" width="39" height="22" aria-hidden="true" focusable="false">
-                      <use xlink:href="img/sprite.svg#more"></use>
-                    </svg>
-                  </a>
+                  <a class="gallery-item__btn" href="#">Подробнее</a>
                 </div>
 
                 <p class="gallery-item__slogan">FELIX</p>
@@ -195,12 +176,7 @@
                   <h3 class="visually-hidden">Очиститель Felix</h3>
                   <img class="gallery-item__logo" src="./img/logo-felix.svg"  alt="Логотип компании Felix." width="114" height="40">
                   <p class="gallery-item__description">Масло Felix 4+1</p>
-                  <a class="gallery-item__btn" href="#">
-                    <span class="gallery-item__btn-caption">Подробнее</span>
-                    <svg class="gallery-item__btn-icon" width="39" height="22" aria-hidden="true" focusable="false">
-                      <use xlink:href="img/sprite.svg#more"></use>
-                    </svg>
-                  </a>
+                  <a class="gallery-item__btn" href="#">Подробнее</a>
                 </div>
 
                 <p class="gallery-item__slogan">FELIX</p>
@@ -230,24 +206,26 @@
           <li class="opportunities__item">
             <p class="opportunities__number">01</p>
             <h3 class="opportunities__title">Бесплатный звонок</h3>
-            <p class="opportunities__decription">
-              <span class="opportunities__decription-text">На любые номера РФ</span>
+            <p class="opportunities__description">
+              <span class="opportunities__description-text">На любые номера РФ</span>
               <span class="opportunities__phone">8 800 550-19-80</span>
             </p>
-            <a class="opportunities__link opportunities__link--whatsapp app__btn" href="">
+            <a class="opportunities__link opportunities__link--whatsapp app-btn" href="">
               <svg class="opportunities__link-icon" width="30" height="31" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite.svg#whatsapp"></use>
               </svg>
-              <span class="opportunities__link-text">WhatsApp</span>
-              <span class="opportunities__link-phone">+7 (928) 107-80-80</span>
+              <span class="opportunities__link-text">
+                <span class="opportunities__link-name">WhatsApp</span>
+                <span class="opportunities__link-phone">+7 (928) 107-80-80</span>
+              </span>
             </a>
           </li>
 
           <li class="opportunities__item">
             <p class="opportunities__number">02</p>
             <h3 class="opportunities__title">Бесплатный подбор</h3>
-            <p class="opportunities__decription">Мы найдем самую низкую цену на оригинальную запчасть, достойную альтернативу или самый дешевый аналог.</p>
-            <a class="opportunities__link app__btn" href="">
+            <p class="opportunities__description">Мы найдем самую низкую цену на оригинальную запчасть, достойную альтернативу или самый дешевый аналог.</p>
+            <a class="opportunities__link app-btn" href="">
               <span class="opportunities__link-text">Заявка на подбор</span>
             </a>
           </li>
@@ -255,8 +233,8 @@
           <li class="opportunities__item">
             <p class="opportunities__number">03</p>
             <h3 class="opportunities__title">Бесплатная доставка</h3>
-            <p class="opportunities__decription">Согласуем и привезём запчасти в офис или домой в удобное для Вас время.</p>
-            <a class="opportunities__link app__btn" href="">
+            <p class="opportunities__description">Согласуем и привезём запчасти в офис или домой в удобное для Вас время.</p>
+            <a class="opportunities__link app-btn" href="">
               <span class="opportunities__link-text">Пункты выдачи</span>
             </a>
           </li>
@@ -333,27 +311,18 @@
 
       <ul class="page-footer__social-list social-list">
         <li class="social-list__item">
-          <a class="social-list__link" href="#">
+          <a class="social-list__link social-list__link--vk" href="#">
             <span class="visually-hidden">VK</span>
-            <svg class="social-list__link-icon" width="18" height="11" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#vk"></use>
-            </svg>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="#">
+          <a class="social-list__link social-list__link--whatsapp" href="#">
             <span class="visually-hidden">WhatsApp</span>
-            <svg class="social-list__link-icon" width="15" height="15" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#whatsapp"></use>
-            </svg>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="#">
+          <a class="social-list__link social-list__link--instagram" href="#">
             <span class="visually-hidden">Instagram</span>
-            <svg class="social-list__link-icon" width="17" height="16" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#instagram"></use>
-            </svg>
           </a>
         </li>
       </ul>

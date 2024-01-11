@@ -3,7 +3,6 @@
 }
 
 .social-list__link {
-  position: relative;
   .button();
 
   width: 30px;
@@ -12,15 +11,23 @@
   border-radius: 50%;
   background-color: @color-white;
 
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--vk {
+    background-image: url("../../img/vk.svg");
+    background-size: 18px 11px;
+  }
+
+  &--whatsapp {
+    background-image: url("../../img/whatsapp.svg");
+    background-size: 15px 15px;
+  }
+
+  &--instagram {
+    background-image: url("../../img/instagram.svg");
+    background-size: 17px 16px;
+  }
+
   .interactive-styles();
-}
-
-.social-list__link-icon {
-  position: absolute;
-
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
 }
