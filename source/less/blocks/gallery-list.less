@@ -1,4 +1,8 @@
-.gallery-item {
+.gallery-list {
+  .list();
+}
+
+.gallery-list__item {
   position: relative;
 
   &::before {
@@ -28,19 +32,19 @@
   }
 }
 
-.gallery-item--oil-champion::before {
+.gallery-list__item--oil-champion::before {
   .gallery-background("blue-back");
 }
 
-.gallery-item--cosmetics-felix::before {
+.gallery-list__item--cosmetics-felix::before {
   .gallery-background("grey-back");
 }
 
-.gallery-item--oil-felix::before {
+.gallery-list__item--oil-felix::before {
   .gallery-background("yellow-back");
 }
 
-.gallery-item__wrapper {
+.gallery-list__item-wrapper {
   position: relative;
   overflow: hidden;
 
@@ -50,7 +54,7 @@
   }
 }
 
-.gallery-item__content {
+.gallery-list__item-content {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -70,7 +74,7 @@
   }
 }
 
-.gallery-item__logo {
+.gallery-list__item-logo {
   margin-bottom: 10px;
 
   @media (min-width: @sm-width) {
@@ -78,10 +82,12 @@
   }
 }
 
-.gallery-item__description {
+.gallery-list__item-description {
+  flex-grow: 1;
+  
   display: flex;
   align-items: center;
-  min-height: 172px;
+  // min-height: 172px;
   margin: 0;
   margin-bottom: 5px;
 
@@ -100,7 +106,7 @@
   }
 }
 
-.gallery-item__btn {
+.gallery-list__item-btn {
   .button();
 
   display: flex;
@@ -121,7 +127,7 @@
   .interactive-styles();
 }
 
-.gallery-item__slogan {
+.gallery-list__item-slogan {
   display: none;
 
   @media (min-width: @lg-width) {
@@ -140,7 +146,7 @@
   }
 }
 
-.gallery-item__img {
+.gallery-list__item-img {
   position: absolute;
   top: 15px;
   left: 0;
@@ -152,7 +158,7 @@
   object-fit: cover;
 }
 
-.gallery-item--oil-champion .gallery-item__img {
+.gallery-list__item--oil-champion .gallery-list__item-img {
   top: 27px;
   width: 191px;
   height: 298px;
@@ -170,12 +176,12 @@
   }
 }
 
-.gallery-item--cosmetics-felix .gallery-item__img {
+.gallery-list__item--cosmetics-felix .gallery-list__item-img {
   width: 394px;
   height: 352px;
 }
 
-.gallery-item--oil-felix .gallery-item__img {
+.gallery-list__item--oil-felix .gallery-list__item-img {
   width: 269px;
   height: 330px;
 }
