@@ -10,7 +10,6 @@
   display: block;
   width: 24px;
   height: 24px;
-
 }
 
 .site-toggle__icon {
@@ -25,4 +24,18 @@
 .site-toggle__icon--close {
   top: 4px;
   left: 5px;
+
+  display: none;
+}
+
+.site-toggle--opened .site-toggle__icon--close {
+  @media (max-width: (@ml-width - 1)) {
+    display: block;
+  }
+}
+
+.site-toggle--opened .site-toggle__icon--open {
+  @media (max-width: (@ml-width - 1)) {
+    display: none;
+  }
 }

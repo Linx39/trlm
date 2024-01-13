@@ -6,6 +6,23 @@
   position: relative;
 }
 
+.gallery__item {
+  // min-height: 299px;
+}
+
+.gallery__item-wrapper {
+  box-sizing: border-box;
+  height: 100%;
+  .wrapper-inner();
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  @media (min-width: @sm-width) {
+    padding-top: 40px;
+    padding-bottom: 39px;
+  }
+}
+
 .gallery__controls {
   position: absolute;
   top: 0;

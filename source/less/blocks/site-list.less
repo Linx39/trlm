@@ -70,5 +70,20 @@
   padding-top: 5px;
   padding-bottom: 5px;
 
+  text-align: left;
   .interactive-styles();
+
+  &--special {
+    font-weight: 700;
+  }
+}
+
+.site-list__link--opened {
+  .link-svg-style("arrow-light.svg");
+
+  @media (max-width: (@ml-width - 1)) {
+    &--special {
+      background-image: url("../../img/arrow-dark.svg");
+    }
+  }
 }

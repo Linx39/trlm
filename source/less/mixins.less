@@ -1,6 +1,5 @@
 .list () {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
   padding: 0;
   list-style-type: none;
 }
@@ -14,7 +13,6 @@
   background-color: inherit;
   font: inherit;
   text-decoration: none;
-  text-align: center;
   cursor: pointer;
 }
 
@@ -115,5 +113,26 @@
 
   @media (min-width: @ml-width) {
     .retina-background(@gallery-back-path, @img-name, @max-content);
+  }
+}
+
+.link-svg-style(@svgName) {
+  @media (max-width: (@ml-width - 1)) {
+    width: 100%;
+    padding-left: 42px;
+    padding-right: 39px;
+
+    background-image: url("../../img/@{svgName}");
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    background-position: center right 39px;
+  }
+
+  @media (min-width: @sm-width) and (max-width: (@ml-width - 1)) {
+    width: auto;
+    padding-left: 42px;
+    padding-right: 29px;
+
+    background-position: center right;
   }
 }

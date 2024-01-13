@@ -1,13 +1,22 @@
 .phone-link {
   .button();
   min-width: 158px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
-  text-align: start;
-  
+  text-align: left;
+
   .interactive-styles();
+}
+
+.phone-link--opened {
+  .link-svg-style("arrow-light.svg");
+
+  @media (max-width: (@sm-width - 1)) {
+    background-image: url("../../img/phone.svg");
+    background-size: 19px 19px;
+  }
 }

@@ -21,9 +21,20 @@
   }
 }
 
+.catalog-toggle--opened {
+  color: @color-light-black;
+  background-color: @color-white;
+}
+
 .catalog-toggle__icon-container {
+  position: relative;
+
   width: 24px;
   height: 24px;
+}
+
+.catalog-toggle__icon {
+  position: absolute;
 }
 
 .catalog-toggle__icon--open {
@@ -33,5 +44,20 @@
 }
 
 .catalog-toggle__icon--close {
+  top: 4px;
+  left: 5px;
+
   display: none;
+}
+
+.catalog-toggle--opened .catalog-toggle__icon--close {
+  @media (max-width: (@ml-width - 1)) {
+    display: block;
+  }
+}
+
+.catalog-toggle--opened .catalog-toggle__icon--open {
+  @media (max-width: (@ml-width - 1)) {
+    display: none;
+  }
 }
