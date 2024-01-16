@@ -5,25 +5,35 @@
   gap: 12px;
 
   color: @color-white;
-  background-color: @color-blue;
+  background-color: @color-button-blue;
 
   &:hover {
-    background-color: @color-light-blue;
+    background-color: @color-button-light-blue;
   }
 
   &:focus-within {
-    background-color: @color-light-blue;
+    background-color: @color-button-light-blue;
     outline: none;
   }
 
   &:active {
-    background-color: @color-dark-blue;
+    background-color: @color-button-dark-blue;
   }
 }
 
 .catalog-toggle--opened {
-  color: @color-light-black;
+  .app-btn__only-top-border-radius();
+  
+  color: @color-font-black;
   background-color: @color-white;
+
+  &:hover,
+  &:focus-within,
+  &:active  {
+    background-color: @color-white;
+  }
+
+  .interactive-styles();
 }
 
 .catalog-toggle__icon-container {

@@ -1,12 +1,53 @@
 .services-list {
   .list();
-}
 
-.services-list__link {
-  color: inherit;
+  display: grid;
 
   font-size: 16px;
   line-height: 23px;
   font-weight: 700;
-  text-decoration: none;
+
+  @media (min-width: @sm-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @ml-width) {
+    column-gap: 20px;
+  }
+}
+
+.services-list__item {
+  &:not(:last-of-type) {
+    border-bottom: 1px solid @color-border-grey;
+  }
+
+  @media (min-width: @sm-width) {
+    border: none;
+  }
+}
+
+.services-list__link {
+  .button();
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 80px;
+  padding: 0 0 0 20px;
+
+  .interactive-styles();
+
+  &--tires {
+    .services-background("tires");
+  }
+
+  &--battery {
+    .services-background("battery");
+  }
+
+  @media (min-width: @ml-width) {
+    min-height: 114px;
+
+    border: 1px solid @color-border-light-grey;
+  }
 }

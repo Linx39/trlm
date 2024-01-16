@@ -98,6 +98,8 @@
   }
 }
 
+@img-path: "../../img/";
+
 .retina-background(@img-src, @img-name, @img-width) {
   background-image: image-set(
     url("@{img-src}@{img-name}-@{img-width}.webp") type("image/webp") 1x,
@@ -107,7 +109,6 @@
   );
 }
 
-@img-path: "../../img/";
 @gallery-back-path: "@{img-path}gallery-back/";
 
 .gallery-background(@img-name) {
@@ -119,6 +120,20 @@
 
   @media (min-width: @ml-width) {
     .retina-background(@gallery-back-path, @img-name, @max-content);
+  }
+}
+
+@services-path: "@{img-path}services/";
+
+.services-background(@img-name) {
+  background-size: 130px 115px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  
+  .retina-background(@services-path, @img-name, @xs-width);
+
+  @media (min-width: @ml-width) {
+    .retina-background(@services-path, @img-name, @ml-width);
   }
 }
 

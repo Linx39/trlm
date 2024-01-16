@@ -1,13 +1,79 @@
 .products-list {
   .list();
-}
 
-.products-list__link {
-  .button();
+  display: grid;
 
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: @ml-width) {
+    // grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, 144px);
+    grid-auto-flow: column;
+    gap: 20px;
+    // display: flex;
+    // flex-direction: column;
+    // flex-wrap: wrap;
+    // height: 650px;
+    min-height: 612px;
+  }
+}
+
+.products-list__item {
+  display: flex;
+  align-items: center;
+
+  min-height: 52px;
+
+  border-bottom: 1px solid @color-border-grey;
+
+  @media (min-width: @ml-width) {
+    flex-direction: column;
+    align-items: start;
+
+    width: auto;
+    border: none;
+  }
+}
+
+.products-list__link {
+  .button();
+
+  @media (max-width: (@ml-width - 1)) {
+    position: relative;
+
+    width: 100%;
+    padding: 4px 15px 4px 20px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 14px;
+      height: 14px;
+      top: 0;
+      bottom: 0;
+      right: 15px;
+      margin: auto 0;
+
+      background-image: url("../../img/arrow-dark.svg");
+      background-size: 14px 14px;
+      background-repeat: no-repeat;
+      background-position: center right;
+      transform: rotate(90deg);
+    }
+  }
+
+  .interactive-styles();
+}
+
+.products-list__category-list {
+  display: none;
+
+  @media (min-width: @ml-width) {
+    display: block;
+  }
 }

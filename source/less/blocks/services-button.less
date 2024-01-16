@@ -1,0 +1,23 @@
+.services-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .app-btn__not-border-radius();
+  
+  color: @color-white;
+  background-color: @color-button-blue;
+
+  &:hover {
+    background-color: @color-button-light-blue;
+  }
+
+  &:focus-within {
+    background-color: @color-button-light-blue;
+    outline: none;
+  }
+
+  &:active {
+    background-color: @color-button-dark-blue;
+  }
+}
