@@ -1,6 +1,6 @@
 .main-nav {
   position: fixed;
-  z-index: 10;
+  z-index: 100;
 
   display: grid;
   grid-template-columns: @xs-padding-nav minmax(32px, min-content) min-content auto min-content min-content @xs-padding-nav;
@@ -41,38 +41,22 @@
 .main-nav--site-list-opened {
   @media (max-width: (@ml-width - 1)) {
     grid-template-rows: minmax(60px, min-content) min-content min-content;
-    // top: 0;
-    // left: 0;
-
-    // background-color: @color-white;
   }
 }
 
 .main-nav--catalog-opened {
   position: relative;
+  z-index: auto;
 
-  grid-template-rows: minmax(60px, min-content) minmax(44px, min-content) min-content auto;
+  // grid-template-rows: minmax(60px, min-content) minmax(44px, min-content) min-content auto;
 
-  @media (min-width: @sm-width) {
-    grid-template-rows: minmax(60px, min-content) 10px minmax(50px, min-content) auto;
-  }
+  // @media (min-width: @sm-width) {
+  //   grid-template-rows: minmax(60px, min-content) 10px minmax(50px, min-content) auto;
+  // }
 
-  @media (min-width: @ml-width) {
-    grid-template-rows: minmax(61px, min-content) minmax(50px, min-content) auto;
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    top: 0;
-    left: 0;
-
-    background-color: rgba(@color-black, 0.5);
-    overflow: auto;
-  }
+  // @media (min-width: @ml-width) {
+  //   grid-template-rows: minmax(61px, min-content) minmax(50px, min-content) auto;
+  // }
 }
 
 .main-nav__bottom-bar {
@@ -82,10 +66,6 @@
   height: 100%;
 
   background-color: @color-back-grey;
-
-  // @media (min-width: @sm-width) {
-  //   grid-row: 2 / -1;
-  // }
 
   @media (min-width: @ml-width) {
     display: none;
@@ -324,7 +304,7 @@
 }
 
 .main-nav--catalog-opened .main-nav__catalog-toggle {
-  // position: absolute;
+  position: relative;
   z-index: 100;
 }
 
@@ -333,21 +313,21 @@
 }
 
 .main-nav--catalog-opened .main-nav__catalog {
-  // position: absolute;
+  position: absolute;
   z-index: 100;
-
-  grid-row: -1 / -2;
+  top: 100%;
+  grid-row: -2 / -3;
   grid-column: 1 / -1;
 
-  display: block;  //исправить
+  display: grid;  //исправить
+
+  width: 100%;
 
   background-color: @color-white;
 
   @media (min-width: @ml-width) {
-    // grid-row: 3 / 4;
-    padding: 20px 20px 39px 20px;
+    grid-row: -2 / -3;
   }
-
 }
 
 .main-nav__site-list {

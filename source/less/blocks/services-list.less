@@ -12,17 +12,22 @@
   }
 
   @media (min-width: @ml-width) {
-    column-gap: 20px;
+    gap: 20px;
+  }
+
+  @media (min-width: @lg-width) {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
 
 .services-list__item {
   &:not(:last-of-type) {
     border-bottom: 1px solid @color-border-grey;
-  }
 
-  @media (min-width: @sm-width) {
-    border: none;
+    @media (min-width: @sm-width) {
+      border: none;
+    }
   }
 }
 
@@ -46,7 +51,11 @@
   }
 
   @media (min-width: @ml-width) {
+    display: flex;
+    justify-content: end;
+    
     min-height: 114px;
+    padding: 0 20px 0 0;
 
     border: 1px solid @color-border-light-grey;
   }

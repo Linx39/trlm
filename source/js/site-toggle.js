@@ -1,4 +1,4 @@
-import {closeModal, openModal} from "./utils.js";
+import {deleteOverlay, addOverlay} from "./utils.js";
 
 const MAIN_NAV_SITE_LIST_OPENED_CLASS = `main-nav--site-list-opened`;
 const TOGGLE_OPENED_CLASS = `site-toggle--opened`;
@@ -17,7 +17,7 @@ export const handleSiteToogleClick = () => {
       toggle.classList.remove(TOGGLE_OPENED_CLASS);
       siteLink.forEach((link) => link.classList.remove(SITE_LIST_LINK_OPENED_CLASS));
       phoneLink.classList.remove(PHONE_LINK_OPENED_CLASS);
-      closeModal();
+      deleteOverlay();
       return;
     }
 
@@ -25,7 +25,7 @@ export const handleSiteToogleClick = () => {
     toggle.classList.add(TOGGLE_OPENED_CLASS);
     siteLink.forEach((link) => link.classList.add(SITE_LIST_LINK_OPENED_CLASS));
     phoneLink.classList.add(PHONE_LINK_OPENED_CLASS);
-    openModal();
+    addOverlay();
   }
   );
 };

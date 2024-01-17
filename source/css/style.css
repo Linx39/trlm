@@ -147,23 +147,23 @@ img {
   background-color: #F0F0F0;
 }
 .page__body {
-  position: relative;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   margin: 0;
 }
-@media (max-width: 959px) {
-  .page__body--modal::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    overflow: auto;
-  }
+.overlay {
+  position: relative;
+}
+.overlay::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
 }
 .app-btn {
   display: inline-block;
@@ -579,16 +579,6 @@ img {
 .catalog-toggle--opened:active {
   background-color: #FFFFFF;
 }
-.catalog-toggle--opened:hover {
-  opacity: 0.3;
-}
-.catalog-toggle--opened:focus-visible {
-  opacity: 0.3;
-  outline: none;
-}
-.catalog-toggle--opened:active {
-  opacity: 0.1;
-}
 .catalog-toggle__icon-container {
   position: relative;
   width: 24px;
@@ -702,6 +692,16 @@ img {
   cursor: pointer;
   text-transform: capitalize;
 }
+.category-list__link:hover {
+  color: #2681FF;
+}
+.category-list__link:focus-within {
+  color: #2681FF;
+  outline: none;
+}
+.category-list__link:active {
+  color: #0055CB;
+}
 .products-list {
   margin: 0;
   padding: 0;
@@ -715,11 +715,16 @@ img {
 }
 @media (min-width: 960px) {
   .products-list {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(auto-fit, 144px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(144px, min-content));
     grid-auto-flow: column;
     gap: 20px;
-    min-height: 612px;
+  }
+}
+@media (min-width: 1600px) {
+  .products-list {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, minmax(144px, min-content));
   }
 }
 .products-list__item {
@@ -746,10 +751,10 @@ img {
   font: inherit;
   text-decoration: none;
   cursor: pointer;
+  position: relative;
 }
 @media (max-width: 959px) {
   .products-list__link {
-    position: relative;
     width: 100%;
     padding: 4px 15px 4px 20px;
   }
@@ -767,6 +772,27 @@ img {
     background-repeat: no-repeat;
     background-position: center right;
     transform: rotate(90deg);
+  }
+}
+@media (min-width: 960px) {
+  .products-list__link {
+    width: auto;
+    padding: 8px 68px 8px 0;
+  }
+  .products-list__link::after {
+    position: absolute;
+    content: "все";
+    padding: 0 12px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border: 1px solid #1C69D4;
+    border-radius: 4px;
+    color: #1C69D4;
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 400;
+    text-transform: lowercase;
   }
 }
 .products-list__link:hover {
@@ -803,14 +829,20 @@ img {
 }
 @media (min-width: 960px) {
   .services-list {
-    column-gap: 20px;
+    gap: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .services-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
 .services-list__item:not(:last-of-type) {
   border-bottom: 1px solid #E6E6E6;
 }
 @media (min-width: 640px) {
-  .services-list__item {
+  .services-list__item:not(:last-of-type) {
     border: none;
   }
 }
@@ -841,34 +873,41 @@ img {
   opacity: 0.1;
 }
 .services-list__link--tires {
-  background-size: 130px 115px;
-  background-repeat: no-repeat;
-  background-position: top right;
   background-image: -webkit-image-set(url("../../img/services/tires-320px.webp") type("image/webp") 1x, url("../../img/services/tires-320px@2x.webp") type("image/webp") 2x, url("../../img/services/tires-320px.png") type("image/png") 1x, url("../../img/services/tires-320px@2x.png") type("image/png") 2x);
   background-image: image-set(url("../../img/services/tires-320px.webp") type("image/webp") 1x, url("../../img/services/tires-320px@2x.webp") type("image/webp") 2x, url("../../img/services/tires-320px.png") type("image/png") 1x, url("../../img/services/tires-320px@2x.png") type("image/png") 2x);
+  background-size: 130px 115px;
+  background-position: top right;
+  background-repeat: no-repeat;
 }
 @media (min-width: 960px) {
   .services-list__link--tires {
     background-image: -webkit-image-set(url("../../img/services/tires-960px.webp") type("image/webp") 1x, url("../../img/services/tires-960px@2x.webp") type("image/webp") 2x, url("../../img/services/tires-960px.png") type("image/png") 1x, url("../../img/services/tires-960px@2x.png") type("image/png") 2x);
     background-image: image-set(url("../../img/services/tires-960px.webp") type("image/webp") 1x, url("../../img/services/tires-960px@2x.webp") type("image/webp") 2x, url("../../img/services/tires-960px.png") type("image/png") 1x, url("../../img/services/tires-960px@2x.png") type("image/png") 2x);
+    background-size: auto;
+    background-position: top left;
   }
 }
 .services-list__link--battery {
-  background-size: 130px 115px;
-  background-repeat: no-repeat;
-  background-position: top right;
   background-image: -webkit-image-set(url("../../img/services/battery-320px.webp") type("image/webp") 1x, url("../../img/services/battery-320px@2x.webp") type("image/webp") 2x, url("../../img/services/battery-320px.png") type("image/png") 1x, url("../../img/services/battery-320px@2x.png") type("image/png") 2x);
   background-image: image-set(url("../../img/services/battery-320px.webp") type("image/webp") 1x, url("../../img/services/battery-320px@2x.webp") type("image/webp") 2x, url("../../img/services/battery-320px.png") type("image/png") 1x, url("../../img/services/battery-320px@2x.png") type("image/png") 2x);
+  background-size: 130px 115px;
+  background-position: top right;
+  background-repeat: no-repeat;
 }
 @media (min-width: 960px) {
   .services-list__link--battery {
     background-image: -webkit-image-set(url("../../img/services/battery-960px.webp") type("image/webp") 1x, url("../../img/services/battery-960px@2x.webp") type("image/webp") 2x, url("../../img/services/battery-960px.png") type("image/png") 1x, url("../../img/services/battery-960px@2x.png") type("image/png") 2x);
     background-image: image-set(url("../../img/services/battery-960px.webp") type("image/webp") 1x, url("../../img/services/battery-960px@2x.webp") type("image/webp") 2x, url("../../img/services/battery-960px.png") type("image/png") 1x, url("../../img/services/battery-960px@2x.png") type("image/png") 2x);
+    background-size: auto;
+    background-position: top left;
   }
 }
 @media (min-width: 960px) {
   .services-list__link {
+    display: flex;
+    justify-content: end;
     min-height: 114px;
+    padding: 0 20px 0 0;
     border: 1px solid #DDDDDD;
   }
 }
@@ -890,44 +929,83 @@ img {
 .services-button:active {
   background-color: #0055CB;
 }
-.services {
+.catalog {
+  box-sizing: border-box;
   display: grid;
 }
 @media (min-width: 960px) {
-  .services {
-    grid-template-columns: 1fr 1fr 1fr;
+  .catalog {
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
+    row-gap: 12px;
+    padding: 20px 20px 39px 20px;
   }
 }
-.services__button {
-  grid-row: 1 / 2;
-  width: 100%;
+@media (min-width: 1280px) {
+  .catalog {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: min-content 1fr;
+    padding-bottom: 18px;
+  }
+}
+@media (min-width: 1600px) {
+  .catalog {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: min-content 1fr;
+    padding: 30px 50px 38px 50px;
+  }
+}
+@media (min-width: 960px) {
+  .catalog__products-list {
+    grid-column: 1 / -1;
+  }
+}
+@media (min-width: 1280px) {
+  .catalog__products-list {
+    grid-row: 1 / -1;
+    grid-column: 1 / -2;
+  }
+}
+.catalog__services-button {
+  grid-row: 3 / 4;
   min-height: 53px;
 }
 @media (min-width: 960px) {
-  .services__button {
+  .catalog__services-button {
+    grid-row: auto;
     grid-column: 1 / 2;
     align-self: end;
     min-height: 60px;
+    margin-right: 17px;
   }
 }
-.services__list {
+@media (min-width: 1280px) {
+  .catalog__services-button {
+    grid-row: 1 / 2;
+    grid-column: -1 / -2;
+    align-self: start;
+    margin-right: 0;
+  }
+}
+.catalog__services-list {
   grid-row: 2 / 3;
 }
 @media (min-width: 960px) {
-  .services__list {
-    grid-column: 2 / 4;
-    grid-row: 1 / 2;
+  .catalog__services-list {
+    grid-row: auto;
+    grid-column: 2 / -1;
   }
 }
-@media (min-width: 960px) {
-  .catalog {
-    padding: 20px 20px 39px 20px;
+@media (min-width: 1280px) {
+  .catalog__services-list {
+    grid-row: 2 / -1;
+    grid-column: -1 / -2;
+    align-self: start;
   }
 }
 .main-nav {
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   display: grid;
   grid-template-columns: 10px minmax(32px, min-content) min-content auto min-content min-content 10px;
   grid-template-rows: minmax(60px, min-content) minmax(44px, min-content) min-content 12px;
@@ -972,28 +1050,7 @@ img {
 }
 .main-nav--catalog-opened {
   position: relative;
-  grid-template-rows: minmax(60px, min-content) minmax(44px, min-content) min-content auto;
-}
-@media (min-width: 640px) {
-  .main-nav--catalog-opened {
-    grid-template-rows: minmax(60px, min-content) 10px minmax(50px, min-content) auto;
-  }
-}
-@media (min-width: 960px) {
-  .main-nav--catalog-opened {
-    grid-template-rows: minmax(61px, min-content) minmax(50px, min-content) auto;
-  }
-}
-.main-nav--catalog-opened::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  overflow: auto;
+  z-index: auto;
 }
 .main-nav__bottom-bar {
   grid-row: 2 / -1;
@@ -1225,21 +1282,25 @@ img {
   }
 }
 .main-nav--catalog-opened .main-nav__catalog-toggle {
+  position: relative;
   z-index: 100;
 }
 .main-nav__catalog {
   display: none;
 }
 .main-nav--catalog-opened .main-nav__catalog {
+  position: absolute;
   z-index: 100;
-  grid-row: -1 / -2;
+  top: 100%;
+  grid-row: -2 / -3;
   grid-column: 1 / -1;
-  display: block;
+  display: grid;
+  width: 100%;
   background-color: #FFFFFF;
 }
 @media (min-width: 960px) {
   .main-nav--catalog-opened .main-nav__catalog {
-    padding: 20px 20px 39px 20px;
+    grid-row: -2 / -3;
   }
 }
 @media (max-width: 959px) {

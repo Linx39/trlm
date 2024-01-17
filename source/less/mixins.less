@@ -126,14 +126,15 @@
 @services-path: "@{img-path}services/";
 
 .services-background(@img-name) {
-  background-size: 130px 115px;
-  background-repeat: no-repeat;
-  background-position: top right;
-  
   .retina-background(@services-path, @img-name, @xs-width);
+  background-size: 130px 115px;
+  background-position: top right;
+  background-repeat: no-repeat;
 
   @media (min-width: @ml-width) {
     .retina-background(@services-path, @img-name, @ml-width);
+    background-size: auto;
+    background-position: top left;
   }
 }
 

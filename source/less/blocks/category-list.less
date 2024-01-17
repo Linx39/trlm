@@ -11,4 +11,17 @@
 .category-list__link {
   .button();
   text-transform: capitalize;
+
+  &:hover {
+    color: @color-button-light-blue;
+  }
+
+  &:focus-within {
+    color: @color-button-light-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: @color-button-dark-blue;
+  }
 }
