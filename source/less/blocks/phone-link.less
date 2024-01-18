@@ -7,16 +7,27 @@
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
-  text-align: left;
 
   .interactive-styles();
 }
 
 .phone-link--opened {
-  .link-svg-style("arrow-light.svg");
+  width: 100%;
+  padding-left: 42px;
+  padding-right: 23px;
 
-  @media (max-width: (@sm-width - 1)) {
-    background-image: url("../../img/phone.svg");
-    background-size: 19px 19px;
+  background-image: url("../../img/phone.svg");
+  background-size: 19px 19px;
+  background-repeat: no-repeat;
+  background-position: center right 23px;
+
+  @media (min-width: @sm-width) {
+    width: auto;
+    padding-left: 42px;
+    padding-right: 29px;
+
+    background-image: url("../../img/arrow-dark.svg");
+    background-size: 14px 14px;
+    background-position: center right;
   }
 }

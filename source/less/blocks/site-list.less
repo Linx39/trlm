@@ -79,11 +79,24 @@
 }
 
 .site-list__link--opened {
-  .link-svg-style("arrow-light.svg");
+  width: 100%;
+  padding-left: 42px;
+  padding-right: 26px;
 
-  @media (max-width: (@ml-width - 1)) {
-    &--special {
-      background-image: url("../../img/arrow-dark.svg");
-    }
+  background-image: url("../../img/arrow-light.svg");
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: center right 26px;
+
+  &.site-list__link--special {
+    background-image: url("../../img/arrow-dark.svg");
+  }
+
+  @media (min-width: @sm-width) {
+    width: auto;
+    padding-left: 42px;
+    padding-right: 29px;
+
+    background-position: center right;
   }
 }

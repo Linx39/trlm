@@ -4,6 +4,7 @@ const MAIN_NAV_SITE_LIST_OPENED_CLASS = `main-nav--site-list-opened`;
 const TOGGLE_OPENED_CLASS = `site-toggle--opened`;
 const SITE_LIST_LINK_OPENED_CLASS = `site-list__link--opened`;
 const PHONE_LINK_OPENED_CLASS = `phone-link--opened`;
+const OVERLAY_CLASS = `overlay__limit-width`;
 
 const mainNav = document.querySelector(`.main-nav`);
 const toggle = document.querySelector(`.main-nav__site-toggle`);
@@ -17,7 +18,7 @@ export const handleSiteToogleClick = () => {
       toggle.classList.remove(TOGGLE_OPENED_CLASS);
       siteLink.forEach((link) => link.classList.remove(SITE_LIST_LINK_OPENED_CLASS));
       phoneLink.classList.remove(PHONE_LINK_OPENED_CLASS);
-      deleteOverlay();
+      deleteOverlay(OVERLAY_CLASS);
       return;
     }
 
@@ -25,7 +26,7 @@ export const handleSiteToogleClick = () => {
     toggle.classList.add(TOGGLE_OPENED_CLASS);
     siteLink.forEach((link) => link.classList.add(SITE_LIST_LINK_OPENED_CLASS));
     phoneLink.classList.add(PHONE_LINK_OPENED_CLASS);
-    addOverlay();
+    addOverlay(OVERLAY_CLASS);
   }
   );
 };

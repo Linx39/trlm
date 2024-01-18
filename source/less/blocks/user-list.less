@@ -1,5 +1,9 @@
 .user-list {
   .list();
+
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
 }
 
 .user-list__link {
@@ -9,22 +13,18 @@
 
   color: inherit;
 
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
+  background-repeat: no-repeat;
+  background-position: top center;
 
   &--auth {
     background-image: url("../../img/user.svg");
     background-size: 18px 19px;
-    background-repeat: no-repeat;
-    background-position: center top 2px;
+    background-position: top 2px center;
   }
 
   &--cart {
     background-image: url("../../img/cart.svg");
     background-size: 24px 24px;
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   @media (min-width: @sm-width) {

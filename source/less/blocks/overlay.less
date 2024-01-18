@@ -14,3 +14,11 @@
     overflow: auto;
   }
 }
+
+.overlay__limit-width {
+  @media (min-width: @ml-width) {
+    &::before {
+      display: none;
+    }
+  }
+}

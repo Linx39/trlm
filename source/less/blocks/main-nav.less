@@ -47,16 +47,6 @@
 .main-nav--catalog-opened {
   position: relative;
   z-index: auto;
-
-  // grid-template-rows: minmax(60px, min-content) minmax(44px, min-content) min-content auto;
-
-  // @media (min-width: @sm-width) {
-  //   grid-template-rows: minmax(60px, min-content) 10px minmax(50px, min-content) auto;
-  // }
-
-  // @media (min-width: @ml-width) {
-  //   grid-template-rows: minmax(61px, min-content) minmax(50px, min-content) auto;
-  // }
 }
 
 .main-nav__bottom-bar {
@@ -247,7 +237,7 @@
   @media (max-width: (@ml-width - 1)) {
     grid-row: 3 / 4;
     grid-column: 1 / -1;
-    justify-self: start;
+    justify-self: stretch;
 
     display: grid;
     align-items: center;
