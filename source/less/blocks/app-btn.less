@@ -3,12 +3,43 @@
   min-height: 50px;
   padding: 5px 10px;
 
-  border-radius: 4px;
+  .app-btn__border-radius();
 
   font-size: 16px;
   line-height: 23px;
   font-weight: 700;
   text-align: center;
+}
+
+.app-btn__back-color() {
+  color: @color-white;
+  background-color: @color-button-blue;
+
+  &:hover {
+    background-color: @color-button-light-blue;
+  }
+
+  &:focus-within {
+    background-color: @color-button-light-blue;
+    outline: none;
+  }
+
+  &:active {
+    background-color: @color-button-dark-blue;
+  }
+}
+
+.app-btn__back-color-alternative() {
+  color: @color-font-black;
+  background-color: @color-white;
+
+  &:hover,
+  &:focus-within,
+  &:active {
+    background-color: @color-white;
+  }
+
+  // .interactive-styles();
 }
 
 .app-btn__border(@color) {
@@ -17,11 +48,15 @@
   color: @color;
 }
 
-.app-btn__only-top-border-radius () {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+.app-btn__border-radius() {
+  border-radius: 4px;
 }
 
-.app-btn__not-border-radius () {
+.app-btn__not-border-radius() {
   border-radius: 0;
+}
+
+.app-btn__only-top-border-radius() {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }

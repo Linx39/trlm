@@ -6,6 +6,10 @@
   margin-bottom: 20px;
 
   @media (min-width: @lg-width) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @xl-width) {
     margin-bottom: 28px;
   }
 }
@@ -109,7 +113,6 @@
 }
 
 .opportunities__description {
-  align-self: center;
   margin: 0;
 
   font-size: 14px;
@@ -127,7 +130,7 @@
   }
 
   @media (min-width: @lg-width) {
-
+    align-self: center;
   }
 }
 
@@ -147,9 +150,11 @@
   .app-btn__border(@color-button-blue);
 
   &--whatsapp {
-    gap: 6px;
-
     .app-btn__border(@color-button-green);
+  }
+
+  &--icon {
+    gap: 6px;
   }
 
   .interactive-styles();

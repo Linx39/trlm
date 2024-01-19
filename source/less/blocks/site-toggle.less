@@ -1,41 +1,20 @@
 .site-toggle {
   .button();
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 24px;
+  height: 24px;
+
   .interactive-styles();
 }
 
-.site-toggle__icon-container {
-  position: relative;
-
-  display: block;
-  width: 24px;
-  height: 24px;
+.site-toggle--opened {
+  .cross-icon(3px, 18px, @color-font-dark-grey);
 }
 
-.site-toggle__icon {
-  position: absolute;
-}
-
-.site-toggle__icon--open {
-  top: 4px;
-  left: 0;
-}
-
-.site-toggle__icon--close {
-  top: 4px;
-  left: 5px;
-
+.site-toggle--opened .site-toggle__icon {
   display: none;
-}
-
-.site-toggle--opened .site-toggle__icon--close {
-  @media (max-width: (@ml-width - 1)) {
-    display: block;
-  }
-}
-
-.site-toggle--opened .site-toggle__icon--open {
-  @media (max-width: (@ml-width - 1)) {
-    display: none;
-  }
 }

@@ -138,23 +138,24 @@
   }
 }
 
-.link-svg-style(@svgName) {
-  @media (max-width: (@ml-width - 1)) {
-    width: 100%;
-    padding-left: 42px;
-    padding-right: 26px;
+.cross-icon(@width, @height, @color) {
+  position: relative;
 
-    background-image: url("../../img/@{svgName}");
-    background-size: 14px 14px;
-    background-repeat: no-repeat;
-    background-position: center right 26px;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: @width;
+    height: @height;
+
+    background-color: @color;
   }
 
-  @media (min-width: @sm-width) and (max-width: (@ml-width - 1)) {
-    width: auto;
-    padding-left: 42px;
-    padding-right: 29px;
+  &::before {
+    transform: rotate(45deg);
+  }
 
-    background-position: center right;
+  &::after {
+    transform: rotate(-45deg);
   }
 }

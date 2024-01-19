@@ -1,26 +1,121 @@
+.search-form {
+  position: relative;
+
+  box-sizing: border-box;
+
+  background-color: @color-white;
+
+  @media (min-width: @sm-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    gap: 8px;
+
+    height: 100%;
+    padding: 0 17px;
+
+    border: 1px solid @color-border-dark-grey;
+    border-radius: 4px;
+
+    box-shadow: 0 2px 4px 0 rgba(@color-black, 0.1) inset;
+
+  }
+}
+
+.search-form--opened {
+  display: grid;
+  grid-template-columns: min-content 1fr 110px;
+  align-items: center;
+  gap: 8px;
+
+  padding-left: 10px;
+  padding-right: 0;
+
+  @media (min-width: @sm-width) {
+    grid-template-columns: min-content 1fr 122px;
+    padding-left: 17px;
+  }
+}
+
+.search-form__toogle {
+  .button();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 24px;
+  height: 24px;
+
+  .interactive-styles();
+}
+
+.search-form--opened .search-form__toogle {
+  .cross-icon(2px, 17px, @color-black);
+}
+
+.search-form--opened .search-form__toogle-icon {
+  display: none;
+}
+
 .search-form__input {
   box-sizing: border-box;
+  display: none;
   width: 100%;
-  padding: 14px 8px 14px 49px;
 
-  background-image: url("../../img/search.svg");
-  background-size: 18px 18px;
-  background-position: left 20px center;
-  background-repeat: no-repeat;
-
-  border: 1px solid @color-border-dark-grey;
-  border-radius: 4px;
-
-  box-shadow: 0 2px 4px 0 rgba(@color-black, 0.1) inset;
+  border: none;
 
   font-family: @font-page;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+  }
+
+  @media (min-width: @sm-width) {
+    display: block;
+  }
+}
+
+.search-form--opened .search-form__input {
+  display: block;
 }
 
 .search-form__input::placeholder {
   color: @color-font-grey;
 
   font: inherit;
+}
+
+.search-form__submit-btn {
+  display: none;
+}
+
+.search-form--opened .search-form__submit-btn {
+  position: absolute;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  width: 110px;
+  height: 60px;
+
+  .app-btn__back-color();
+  .app-btn__not-border-radius();
+
+  @media (min-width: @sm-width) {
+    gap: 8px;
+
+    width: 122px;
+    height: 50px;
+    .app-btn__border-radius();
+  }
 }
