@@ -1,6 +1,9 @@
 .phone-link {
   .button();
-  min-width: 158px;
+  display: flex;
+  align-items: center;
+
+  width: max-content;
   padding-top: 5px;
   padding-bottom: 5px;
 
@@ -12,22 +15,31 @@
 }
 
 .phone-link--opened {
-  width: 100%;
-  padding-left: 42px;
-  padding-right: 23px;
+  @media (max-width: (@ml-width - 1)) {
+    min-height: 72px;
+    padding-left: 42px;
+    padding-right: 23px;
 
-  background-image: url("../../img/phone.svg");
-  background-size: 19px 19px;
-  background-repeat: no-repeat;
-  background-position: center right 23px;
+    & span {
+      width: 100%;
 
-  @media (min-width: @sm-width) {
-    width: max-content;
+      background-image: url("../../img/phone.svg");
+      background-size: 19px 19px;
+      background-repeat: no-repeat;
+      background-position: center right;
+    }
+  }
+
+  @media (min-width: @sm-width) and (max-width: (@ml-width - 1)) {
     padding-left: 52px;
-    padding-right: 43px;
 
-    background-image: url("../../img/arrow-dark.svg");
-    background-size: 14px 14px;
-    background-position: center right;
+    & span {
+      width: max-content;
+      padding-right: 43px;
+
+      background-image: url("../../img/arrow-dark.svg");
+      background-size: 14px 14px;
+      background-position: center right;
+    }
   }
 }
