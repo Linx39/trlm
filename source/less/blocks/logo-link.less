@@ -1,8 +1,13 @@
 .logo-link {
   .button();
-  text-align: start;
+  min-width: 65px;
 
   .interactive-styles();
+
+  @media (min-width: @ml-width) {
+    width: 80px;
+    height: 88px;
+  }
 }
 
 .logo-link__img {

@@ -6,6 +6,10 @@
   font-weight: 400;
 }
 
+.user-list__item {
+  height: 24px;
+}
+
 .user-list__link {
   .button();
   width: 24px;
@@ -14,11 +18,11 @@
   color: inherit;
 
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
 
   &--auth {
     background-image: url("../../img/user.svg");
-    background-size: 18px 19px;
+    background-size: 19px 20px;
     background-position: top 2px center;
   }
 
@@ -30,7 +34,6 @@
   @media (min-width: @sm-width) {
     width: auto;
     padding-left: 32px;
-    padding-top: 4px;
 
     &--auth {
       background-position: left 3px top 2px;
