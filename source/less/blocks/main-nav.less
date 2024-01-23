@@ -130,12 +130,16 @@
 }
 
 .main-nav--search-form-opened .main-nav__search-form {
-  @media (max-width: (@sm-width - 1)) {
-    grid-column: 1 / -1;
+  @media (max-width: (@ml-width - 1)) {
+    grid-column: 4 / -2;
     justify-self: stretch;
     z-index: 2;
 
     margin-right: 0;
+  }
+
+  @media (max-width: (@sm-width - 1)) {
+    grid-column: 1 / -1;
   }
 }
 
