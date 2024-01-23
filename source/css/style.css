@@ -408,8 +408,15 @@ img {
   -webkit-appearance: none;
           appearance: none;
 }
-.office__select:focus {
+.office__select:hover {
+  opacity: 0.3;
+}
+.office__select:focus-visible {
+  opacity: 0.3;
   outline: none;
+}
+.office__select:active {
+  opacity: 0.1;
 }
 .office__select option {
   width: 119px;
@@ -643,7 +650,7 @@ img {
 .search-form--opened .search-form__submit-btn:hover {
   background-color: #2681FF;
 }
-.search-form--opened .search-form__submit-btn:focus-within {
+.search-form--opened .search-form__submit-btn:focus-visible {
   background-color: #2681FF;
   outline: none;
 }
@@ -662,14 +669,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   color: #FFFFFF;
   background-color: #1C69D4;
 }
 .catalog-toggle:hover {
   background-color: #2681FF;
 }
-.catalog-toggle:focus-within {
+.catalog-toggle:focus-visible {
   background-color: #2681FF;
   outline: none;
 }
@@ -683,7 +690,7 @@ img {
   border-bottom-right-radius: 0;
 }
 .catalog-toggle--opened:hover,
-.catalog-toggle--opened:focus-within,
+.catalog-toggle--opened:focus-visible,
 .catalog-toggle--opened:active {
   background-color: #FFFFFF;
 }
@@ -751,6 +758,8 @@ img {
 }
 @media (min-width: 640px) {
   .user-list__link {
+    display: flex;
+    align-items: center;
     width: auto;
     padding-left: 32px;
   }
@@ -803,7 +812,7 @@ img {
 .category-list__link:hover {
   color: #2681FF;
 }
-.category-list__link:focus-within {
+.category-list__link:focus-visible {
   color: #2681FF;
   outline: none;
 }
@@ -1034,7 +1043,7 @@ img {
 .services-btn:hover {
   background-color: #2681FF;
 }
-.services-btn:focus-within {
+.services-btn:focus-visible {
   background-color: #2681FF;
   outline: none;
 }
